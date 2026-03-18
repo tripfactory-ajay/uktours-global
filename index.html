@@ -194,6 +194,39 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
 .meal-chk input:checked+span{color:#1a3a5c;font-weight:700;}
 @media print{.meal-sel{background:#fff;border:1px solid #ccc;}
   .meal-chk input[type=checkbox]{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+
+/* ── TOUR NOTES SECTION ── */
+.tour-notes{margin:20px 0 0;padding:16px;background:#fffbf0;border:2px solid #c9a84c;
+  border-radius:8px;page-break-inside:avoid;}
+.tour-notes-title{font-size:13px;font-weight:800;color:#1a3a5c;margin:0 0 10px;
+  font-family:'Playfair Display',serif;display:flex;align-items:center;gap:8px;}
+.tour-notes-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
+.notes-field{display:flex;flex-direction:column;gap:4px;}
+.notes-field label{font-size:9px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.5px;}
+.notes-field input,.notes-field select,.notes-field textarea{
+  border:1px solid #d1d5db;border-radius:4px;padding:6px 8px;font-size:11px;
+  font-family:Arial,sans-serif;color:#374151;background:#fff;width:100%;box-sizing:border-box;}
+.notes-field textarea{resize:vertical;min-height:60px;}
+.notes-field input:focus,.notes-field textarea:focus,.notes-field select:focus{
+  outline:none;border-color:#c9a84c;box-shadow:0 0 0 2px rgba(201,168,76,.15);}
+.notes-save-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.notes-save-btn{background:#1a3a5c;color:#fff;border:none;border-radius:5px;padding:7px 16px;
+  font-size:11px;font-weight:700;cursor:pointer;font-family:Arial,sans-serif;}
+.notes-save-btn:hover{background:#c9a84c;color:#1a3a5c;}
+.notes-save-btn.saved{background:#0e6e55;}
+.notes-status{font-size:10px;color:#0e6e55;font-weight:600;}
+.notes-meal-summary{margin-bottom:10px;padding:8px;background:#f0f4f8;border-radius:5px;}
+.notes-meal-summary-title{font-size:9px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;}
+.notes-meal-summary-text{font-size:10px;color:#374151;}
+@media print{
+  .tour-notes{background:#fffbf0!important;border:2px solid #c9a84c!important;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .notes-save-row{display:none;}
+  .notes-field input,.notes-field textarea,.notes-field select{
+    border:1px solid #d1d5db!important;background:#fff!important;}
+  .notes-status{display:none;}
+}
+
 </style>
 </head>
 <body>
@@ -314,11 +347,11 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
       </div>
       <div class="hb-section">
         <h4 class="hb-sec-hd">🥗 Dining Guarantee</h4>
-        <div class="hb-pills"><span class="hb-diet-pill">Special dietary Options Available</span><span class="hb-diet-pill">Dietary requirements catered</span><span class="hb-diet-pill">All dietary requirements catered</span></div>
-        <p class="hb-diet-note">100% international International (no meat, fish, eggs)</p>
+        <div class="hb-pills"><span class="hb-diet-pill">All dietary requirements catered on request</span></div>
+        <p class="hb-diet-note">Suitable for all dietary requirements</p>
       </div>
     
-      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="Grand%20British%20Isles%20Explorer.png" alt="grand-british-isles route" loading="lazy"/></div></div>
+      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="grand-british-Isles-explorer.png" alt="grand-british-isles route" loading="lazy"/></div></div>
     <div class="hb-section hb-full"><h4 class="hb-sec-hd">⭐ Don't Miss</h4><ul class="hb-dm-list"><li>The Rajasthani set meal at The Ivy — this sets the standard for all meals to come</li><li>The Beefeater tour at Tower of London — their stories of imprisonment and execution bring history alive</li><li>The Long Room at Lords — this is cricket\</li></ul></div>
   </div>
 </div></div>
@@ -344,28 +377,90 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
 
   <div class="padded">
     <h3 class="sec-hd" style="color:#1a3a5c">Day-by-Day Itinerary</h3>
-    <div class="itin"><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 1</span><span class="day-ttl">Arrival in London — The Royal Welcome</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb1" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml1" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md1" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Welcome at London Heathrow by your tour manager. Transfer to Heston Hyde Hotel, Hounslow (20 minutes). Check-in and freshen up. Welcome welcome dinner at The Ivy (London). Orientation meeting with tour manager covering 16-day journey preview.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 2</span><span class="day-ttl">Iconic London — City Tour, Tower of London & London Eye</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb2" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml2" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md2" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Full English breakfast at hotel (full menu available). Depart for panoramic London city tour with expert local guide: Hyde Park, Big Ben, Houses of Parliament, Westminster Abbey (exterior), Buckingham Palace (photo stop for Changing of the Guard, subject to schedule), Trafalgar Square, Piccadilly Circus, Tower Bridge. Lunch at a Covent Garden brasserie including dosas and set meals. Afternoon: Tower of London entrance with Yeoman Warder (Beefeater) guide. See Crown Jewels including Crown Jewels collection. London Eye experience (30-minute rotation, panoramic views). Dinner at a celebrated local restaurant (King's Cross) — vintage-style cuisine in vintage railway setting.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 3</span><span class="day-ttl">Lords Cricket, Madame Tussauds & Bicester Village</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb3" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml3" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md3" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Depart for Lords Cricket Stadium — "Home of Cricket" guided tour including Long Room (players walk through), players' dressing rooms, and museum. See the actual Ashes urn. If closed: extended Tower of London visit. Lunch at a Michelin-starred Mayfair restaurant. Afternoon: Madame Tussauds London — wax figures of Entertainment stars (Shah Rukh Khan, Amitabh Bachchan), sports legends, royalty. Transfer to Bicester Village (1 hour) — luxury outlet shopping with discounts up to 60% on premium brands. Evening: Return to London. Dinner at local restaurant (Whitechapel) — Punjabi grill specialties, famous for lamb chops (veg options excellent).</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 4</span><span class="day-ttl">Windsor Castle & Transfer to Thornbury Castle</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb4" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml4" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md4" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Visit Windsor Castle — Queen's official weekend residence, State Apartments, St George's Chapel (where Harry & Meghan married), Queen's Dolls' House. Walk through historic Eton College town — where Princes William and Harry studied. Lunch at The Mango Tree (Windsor) — contemporary quality cuisine. Afternoon: Scenic drive to Thornbury (2.5 hours). Check-in at Thornbury Castle — your Tudor castle hotel where Henry VIII and Anne Boleyn once stayed. Explore castle grounds, wine cellar, and ramparts. Evening: Royal banquet-style dinner at Thornbury Castle with quality options arranged by castle chef. Sleep in a real castle — not a hotel styled like one.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 5</span><span class="day-ttl">Cotswolds Villages, Bath & Castle Relaxation</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb5" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml5" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md5" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at castle. Drive through Cotswolds Area of Outstanding Natural Beauty — England's most picturesque countryside. Visit Bibury — see Arlington Row, the most photographed cottages in England. Continue to Bourton-on-the-Water — "Venice of the Cotswolds" with low stone bridges. Lunch at a Bath restaurant and tandoori. Afternoon: Bath city tour — Roman Baths (ancient sacred site with thermal waters), Royal Crescent (Georgian architecture masterpiece), Bath Abbey. Return to Thornbury Castle. Evening: Free time to enjoy castle amenities — explore gardens, read in library, or simply absorb the historic atmosphere. Dinner at castle with quality options.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 6</span><span class="day-ttl">Stratford-upon-Avon, Birmingham Arrival</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb6" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml6" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md6" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Visit Stratford-upon-Avon — Shakespeare's Birthplace (restored 16th-century house), Anne Hathaway's Cottage (thatched-roof romantic hideaway), Holy Trinity Church (Shakespeare's grave). Lunch at The a local Stratford restaurant (Stratford) — international fusion cuisine. Afternoon: Transfer to Birmingham (45 minutes). Check-in at Delta Hotels by Marriott Birmingham. Orientation tour of Birmingham: Bullring Shopping Centre (Selfridges building), Grand Central station, Jewellery Quarter (where 40% of UK jewellery is made). Evening: Dinner at Pushkar (Birmingham) — modern international fine dining with innovative presentation.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 7</span><span class="day-ttl">Peak District, Chatsworth House & Yorkshire</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb7" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml7" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md7" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Drive through Peak District National Park — England's first national park, dramatic moorlands and dales. Visit Chatsworth House — "Palace of the Peak", home of Duke and Duchess of Devonshire. Stately home interiors, world-famous gardens, farm shop with local delicacies. Lunch at Saffron (Derby) — North international specialties. Afternoon: Continue to Leeds (1.5 hours). Check-in at Weetwood Hall Estate — your 17th-century manor house hotel set in parkland. Explore grounds and 9-hole golf course. Evening: Dinner at a celebrated Leeds restaurant (Leeds) — Yorkshire-based international chain founded by immigrants, excellent international selection.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 8</span><span class="day-ttl">York Minster, Medieval Walls & Yorkshire Dales</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb8" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml8" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md8" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Drive to York (45 minutes). York Minster cathedral tour — largest Gothic cathedral in Northern Europe, Great East Window (size of tennis court), Undercroft (Roman ruins beneath cathedral), optional tower climb (275 steps) for city views. Walk medieval city walls — best preserved in England, 2-mile circuit with views. Shambles street — inspiration for Diagon Alley, overhanging timber-framed shops. Lunch at Mumbai Lounge (York) — authentic Mumbai street food. Afternoon: Yorkshire Dales scenic drive: Bolton Abbey (ruined priory by river), Aysgarth Falls (waterfall walks), Hawes (Wensleydale cheese tasting — "Wallace and Gromit" cheese). Evening: Return to Weetwood Hall. Dinner at hotel with quality options arranged.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 9</span><span class="day-ttl">Lake District Arrival, Windermere Cruise</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb9" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml9" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md9" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Scenic drive to Lake District (2 hours) — UNESCO World Heritage Site, England's largest national park. Check-in at The Ro Hotel, Windermere — prime location in Bowness-on-Windermere with lake views. Lunch at The Cottage (Bowness) — lakeside quality cuisine. Afternoon: Windermere Lake cruise (steam yacht or modern cruiser) — England's longest lake, surrounded by fells. Visit Beatrix Potter's Hill Top Farm — where she wrote Peter Rabbit, preserved exactly as she left it. Orrest Head viewpoint walk — panoramic views of lake and mountains. Evening: Dinner at Bombay Spice (Windermere) — traditional curries in cosy setting.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 10</span><span class="day-ttl">Full Day Lake District — Ambleside, Grasmere, Keswick</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb10" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml10" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md10" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Drive to Ambleside — Bridge House (tiny house over stream), Waterhead pier. Continue to Grasmere — Dove Cottage (William Wordsworth's home where he wrote "I wandered lonely as a cloud"), Wordsworth Museum, Grasmere Gingerbread Shop (unique recipe since 1854). Lunch at a local Ambleside restaurant with menu options. Afternoon: Derwentwater Lake cruise from Keswick, Castlerigg Stone Circle (5,000-year-old stone circle with mountain backdrop — more atmospheric than Stonehenge), Keswick town exploration. Evening: Return to Windermere. Dinner at The Royal Oak (Bowness) — extensive international menu, local favourite.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 11</span><span class="day-ttl">Ullswater, Haweswater & Rural Retreat</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb11" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml11" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md11" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Drive to Ullswater — England's most beautiful lake according to Wordsworth. Ullswater Steamers cruise to Howtown — traditional wooden launch boats. Optional: hike to Aira Force waterfall (50ft cascade through woodland, National Trust site). Lunch at The Haweswater Hotel (your next hotel) — quality options arranged. Afternoon: Check-in at The Haweswater Hotel — remote rural retreat in valley with no phone signal, perfect digital detox. Red squirrel spotting (native population), peregrine falcon watching, dark sky stargazing (minimal light pollution). Evening: Dinner at The Haweswater Hotel with quality options. Stargazing with hot chocolate — Milky Way visible to naked eye.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 12</span><span class="day-ttl">Hadrian\'s Wall, Transfer to Scotland</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb12" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml12" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md12" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Visit Hadrian's Wall UNESCO World Heritage Site — 73-mile Roman wall built AD 122. Birdoswald Roman Fort (best preserved), Housesteads Roman Fort (complete layout visible), Sycamore Gap (famous tree in wall dip, featured in Robin Hood film). Lunch at a Carlisle restaurant. Afternoon: Scenic drive to Glasgow area (2.5 hours). Check-in at Rosslea Hall Hotel, Helensburgh — coastal location with sea views over Firth of Clyde. Evening: Dinner at Dakhin (Glasgow) — South international specialties, dosas and idlis. Explore Helensburgh seafront promenade.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 13</span><span class="day-ttl">Loch Lomond, Luss Village & Glengoyne</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb13" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml13" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md13" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Drive to Loch Lomond (30 minutes) — largest lake in Great Britain by surface area. Cruise on Loch Lomond from Balloch to Luss — "bonnie banks" from the song. Luss Village — chocolate-box cottages, historic church, beach. Lunch at The Luss Seafood Bar (packed packed lunch arranged as alternative). Afternoon: Glengoyne Distillery tour — whisky making process, warehouse tasting (non-alcoholic options and soft drinks for children available). Drive through Trossachs National Park — "Highlands in Miniature", dramatic scenery. Evening: Return to Rosslea Hall. Dinner at hotel with quality options arranged. Optional evening walk to Helensburgh pier.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 14</span><span class="day-ttl">Edinburgh Castle, Royal Mile & Dalhousie Castle</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb14" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml14" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md14" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Transfer to Edinburgh (1.5 hours). Check-in at Dalhousie Castle — your 13th-century castle hotel with falconry school and Aqueous Spa. Lunch at a celebrated Edinburgh restaurant — contemporary quality cuisine, local favourite. Afternoon: Edinburgh Castle — Crown Jewels of Scotland (including Stone of Destiny), Great Hall, St Margaret's Chapel (oldest building in Edinburgh), National War Museum. Royal Mile walk — from Castle to Holyrood Palace, St Giles' Cathedral (Thistle Chapel), historic closes (alleyways). Evening: Return to Dalhousie Castle. Falconry display — handle hawks, owls, and eagles with expert falconers. Castle dinner with quality options. Optional spa treatment in Aqueous Spa (hydrotherapy pool, sauna).</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 15</span><span class="day-ttl">Edinburgh Exploration, Arthur\'s Seat & Leisure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb15" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml15" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md15" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at castle. Hike to Arthur's Seat — extinct volcano, panoramic 360° views of Edinburgh, Holyrood Park. Alternative: Scottish National Gallery (masterpieces including Titian, Rembrandt, Turner). New Town exploration: Princes Street (shopping), Scott Monument (Victorian Gothic), George Street (Georgian architecture), Charlotte Square. Lunch at a celebrated local restaurant Edinburgh — Bombay café culture, famous for bacon  roll (veg options excellent). Afternoon: Day at Leisure — options: Aqueous Spa treatment (book ahead), shopping at Jenners (historic department store), Royal Yacht Britannia visit (Queen's floating palace), additional castle exploration. Evening: Farewell dinner at The Kitchin (Michelin-starred, international-influenced Scottish cuisine) OR castle banquet with menu options. Celebrate completion of 16-day journey.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 16</span><span class="day-ttl">Departure from Edinburgh</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb16" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml16" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md16" checked><span>🌙 Dinner</span></label></div>
+    <div class="itin"><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 1</span><span class="day-ttl">Arrival in London — The Royal Welcome</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb1"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml1"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md1"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Welcome at London Heathrow by your tour manager. Transfer to Heston Hyde Hotel, Hounslow (20 minutes). Check-in and freshen up. Welcome welcome dinner at The Ivy (London). Orientation meeting with tour manager covering 16-day journey preview.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 2</span><span class="day-ttl">Iconic London — City Tour, Tower of London & London Eye</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb2"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml2"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md2"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Full English breakfast at hotel (full menu available). Depart for panoramic London city tour with expert local guide: Hyde Park, Big Ben, Houses of Parliament, Westminster Abbey (exterior), Buckingham Palace (photo stop for Changing of the Guard, subject to schedule), Trafalgar Square, Piccadilly Circus, Tower Bridge. Lunch at a Covent Garden brasserie including dosas and set meals. Afternoon: Tower of London entrance with Yeoman Warder (Beefeater) guide. See Crown Jewels including Crown Jewels collection. London Eye experience (30-minute rotation, panoramic views). Dinner at a celebrated local restaurant (King's Cross) — vintage-style cuisine in vintage railway setting.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 3</span><span class="day-ttl">Lords Cricket, Madame Tussauds & Bicester Village</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb3"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml3"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md3"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Depart for Lords Cricket Stadium — "Home of Cricket" guided tour including Long Room (players walk through), players' dressing rooms, and museum. See the actual Ashes urn. If closed: extended Tower of London visit. Lunch at a Michelin-starred Mayfair restaurant. Afternoon: Madame Tussauds London — wax figures of Entertainment stars (Shah Rukh Khan, Amitabh Bachchan), sports legends, royalty. Transfer to Bicester Village (1 hour) — luxury outlet shopping with discounts up to 60% on premium brands. Evening: Return to London. Dinner at local restaurant (Whitechapel) — Punjabi grill specialties, famous for lamb chops (veg options excellent).</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 4</span><span class="day-ttl">Windsor Castle & Transfer to Thornbury Castle</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb4"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml4"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md4"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Visit Windsor Castle — Queen's official weekend residence, State Apartments, St George's Chapel (where Harry & Meghan married), Queen's Dolls' House. Walk through historic Eton College town — where Princes William and Harry studied. Lunch at a Windsor town centre restaurant. Afternoon: Scenic drive to Thornbury (2.5 hours). Check-in at Thornbury Castle — your Tudor castle hotel where Henry VIII and Anne Boleyn once stayed. Explore castle grounds, wine cellar, and ramparts. Evening: Royal banquet-style dinner at Thornbury Castle with quality options arranged by castle chef. Sleep in a real castle — not a hotel styled like one.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 5</span><span class="day-ttl">Cotswolds Villages, Bath & Castle Relaxation</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb5"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml5"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md5"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at castle. Drive through Cotswolds Area of Outstanding Natural Beauty — England's most picturesque countryside. Visit Bibury — see Arlington Row, the most photographed cottages in England. Continue to Bourton-on-the-Water — "Venice of the Cotswolds" with low stone bridges. Lunch at a Bath restaurant and tandoori. Afternoon: Bath city tour — Roman Baths (ancient sacred site with thermal waters), Royal Crescent (Georgian architecture masterpiece), Bath Abbey. Return to Thornbury Castle. Evening: Free time to enjoy castle amenities — explore gardens, read in library, or simply absorb the historic atmosphere. Dinner at castle with quality options.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 6</span><span class="day-ttl">Stratford-upon-Avon, Birmingham Arrival</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb6"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml6"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md6"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Visit Stratford-upon-Avon — Shakespeare's Birthplace (restored 16th-century house), Anne Hathaway's Cottage (thatched-roof romantic hideaway), Holy Trinity Church (Shakespeare's grave). Lunch at The a local Stratford restaurant (Stratford) — international fusion cuisine. Afternoon: Transfer to Birmingham (45 minutes). Check-in at Delta Hotels by Marriott Birmingham. Orientation tour of Birmingham: Bullring Shopping Centre (Selfridges building), Grand Central station, Jewellery Quarter (where 40% of UK jewellery is made). Evening: Dinner at Pushkar (Birmingham) — modern international fine dining with innovative presentation.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 7</span><span class="day-ttl">Peak District, Chatsworth House & Yorkshire</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb7"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml7"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md7"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Drive through Peak District National Park — England's first national park, dramatic moorlands and dales. Visit Chatsworth House — "Palace of the Peak", home of Duke and Duchess of Devonshire. Stately home interiors, world-famous gardens, farm shop with local delicacies. Lunch at Saffron (Derby) — North international specialties. Afternoon: Continue to Leeds (1.5 hours). Check-in at Weetwood Hall Estate — your 17th-century manor house hotel set in parkland. Explore grounds and 9-hole golf course. Evening: Dinner at a celebrated Leeds restaurant (Leeds) — Yorkshire-based international chain founded by immigrants, excellent international selection.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 8</span><span class="day-ttl">York Minster, Medieval Walls & Yorkshire Dales</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb8"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml8"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md8"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Drive to York (45 minutes). York Minster cathedral tour — largest Gothic cathedral in Northern Europe, Great East Window (size of tennis court), Undercroft (Roman ruins beneath cathedral), optional tower climb (275 steps) for city views. Walk medieval city walls — best preserved in England, 2-mile circuit with views. Shambles street — inspiration for Diagon Alley, overhanging timber-framed shops. Lunch at Mumbai Lounge (York) — authentic Mumbai street food. Afternoon: Yorkshire Dales scenic drive: Bolton Abbey (ruined priory by river), Aysgarth Falls (waterfall walks), Hawes (Wensleydale cheese tasting — "Wallace and Gromit" cheese). Evening: Return to Weetwood Hall. Dinner at hotel with quality options arranged.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 9</span><span class="day-ttl">Lake District Arrival, Windermere Cruise</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb9"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml9"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md9"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Scenic drive to Lake District (2 hours) — UNESCO World Heritage Site, England's largest national park. Check-in at The Ro Hotel, Windermere — prime location in Bowness-on-Windermere with lake views. Lunch at The Cottage (Bowness) — lakeside quality cuisine. Afternoon: Windermere Lake cruise (steam yacht or modern cruiser) — England's longest lake, surrounded by fells. Visit Beatrix Potter's Hill Top Farm — where she wrote Peter Rabbit, preserved exactly as she left it. Orrest Head viewpoint walk — panoramic views of lake and mountains. Evening: Dinner at Bombay Spice (Windermere) — traditional curries in cosy setting.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 10</span><span class="day-ttl">Full Day Lake District — Ambleside, Grasmere, Keswick</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb10"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml10"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md10"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Drive to Ambleside — Bridge House (tiny house over stream), Waterhead pier. Continue to Grasmere — Dove Cottage (William Wordsworth's home where he wrote "I wandered lonely as a cloud"), Wordsworth Museum, Grasmere Gingerbread Shop (unique recipe since 1854). Lunch at a local Ambleside restaurant with menu options. Afternoon: Derwentwater Lake cruise from Keswick, Castlerigg Stone Circle (5,000-year-old stone circle with mountain backdrop — more atmospheric than Stonehenge), Keswick town exploration. Evening: Return to Windermere. Dinner at The Royal Oak (Bowness) — extensive international menu, local favourite.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 11</span><span class="day-ttl">Ullswater, Haweswater & Rural Retreat</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb11"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml11"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md11"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Drive to Ullswater — England's most beautiful lake according to Wordsworth. Ullswater Steamers cruise to Howtown — traditional wooden launch boats. Optional: hike to Aira Force waterfall (50ft cascade through woodland, National Trust site). Lunch at The Haweswater Hotel (your next hotel) — quality options arranged. Afternoon: Check-in at The Haweswater Hotel — remote rural retreat in valley with no phone signal, perfect digital detox. Red squirrel spotting (native population), peregrine falcon watching, dark sky stargazing (minimal light pollution). Evening: Dinner at The Haweswater Hotel with quality options. Stargazing with hot chocolate — Milky Way visible to naked eye.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 12</span><span class="day-ttl">Hadrian\'s Wall, Transfer to Scotland</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb12"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml12"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md12"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Visit Hadrian's Wall UNESCO World Heritage Site — 73-mile Roman wall built AD 122. Birdoswald Roman Fort (best preserved), Housesteads Roman Fort (complete layout visible), Sycamore Gap (famous tree in wall dip, featured in Robin Hood film). Lunch at a Carlisle restaurant. Afternoon: Scenic drive to Glasgow area (2.5 hours). Check-in at Rosslea Hall Hotel, Helensburgh — coastal location with sea views over Firth of Clyde. Evening: Dinner at Dakhin (Glasgow) — South international specialties, dosas and idlis. Explore Helensburgh seafront promenade.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 13</span><span class="day-ttl">Loch Lomond, Luss Village & Glengoyne</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb13"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml13"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md13"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Drive to Loch Lomond (30 minutes) — largest lake in Great Britain by surface area. Cruise on Loch Lomond from Balloch to Luss — "bonnie banks" from the song. Luss Village — chocolate-box cottages, historic church, beach. Lunch at The Luss Seafood Bar (packed packed lunch arranged as alternative). Afternoon: Glengoyne Distillery tour — whisky making process, warehouse tasting (non-alcoholic options and soft drinks for children available). Drive through Trossachs National Park — "Highlands in Miniature", dramatic scenery. Evening: Return to Rosslea Hall. Dinner at hotel with quality options arranged. Optional evening walk to Helensburgh pier.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 14</span><span class="day-ttl">Edinburgh Castle, Royal Mile & Dalhousie Castle</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb14"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml14"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md14"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Transfer to Edinburgh (1.5 hours). Check-in at Dalhousie Castle — your 13th-century castle hotel with falconry school and Aqueous Spa. Lunch at a celebrated Edinburgh restaurant — contemporary quality cuisine, local favourite. Afternoon: Edinburgh Castle — Crown Jewels of Scotland (including Stone of Destiny), Great Hall, St Margaret's Chapel (oldest building in Edinburgh), National War Museum. Royal Mile walk — from Castle to Holyrood Palace, St Giles' Cathedral (Thistle Chapel), historic closes (alleyways). Evening: Return to Dalhousie Castle. Falconry display — handle hawks, owls, and eagles with expert falconers. Castle dinner with quality options. Optional spa treatment in Aqueous Spa (hydrotherapy pool, sauna).</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 15</span><span class="day-ttl">Edinburgh Exploration, Arthur\'s Seat & Leisure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb15"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml15"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md15"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at castle. Hike to Arthur's Seat — extinct volcano, panoramic 360° views of Edinburgh, Holyrood Park. Alternative: Scottish National Gallery (masterpieces including Titian, Rembrandt, Turner). New Town exploration: Princes Street (shopping), Scott Monument (Victorian Gothic), George Street (Georgian architecture), Charlotte Square. Lunch at a celebrated local restaurant Edinburgh — Bombay café culture, famous for bacon  roll (veg options excellent). Afternoon: Day at Leisure — options: Aqueous Spa treatment (book ahead), shopping at Jenners (historic department store), Royal Yacht Britannia visit (Queen's floating palace), additional castle exploration. Evening: Farewell dinner at The Kitchin (Michelin-starred, international-influenced Scottish cuisine) OR castle banquet with menu options. Celebrate completion of 16-day journey.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 16</span><span class="day-ttl">Departure from Edinburgh</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb16"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml16"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md16"><span>🌙 Dinner</span></label></div>
 <p class="day-desc">Breakfast at castle. Optional morning walk in Dalhousie grounds — see the castle in morning light, say goodbye to falconry birds. Transfer to Edinburgh Airport (30 minutes). Departure flights to India with memories of 16 extraordinary days, 8 cities, 2 castles, and countless experiences. Tour manager assists with check-in and baggage. Farewell gifts: Scottish shortbread, castle postcards, photo USB.</p></div></div>
   </div>
 
   <div class="tour-foot padded" style="border-top:2px solid #1a3a5c30">
     <p>Itinerary subject to change. All tours operate on 16-seater private coaches with experienced UK tour managers. Bookings &amp; pricing: <strong>international@tripfactory.com</strong> &nbsp;·&nbsp; ORN Group / TripFactory UK</p>
   </div>
+
+<div class="padded">
+<div class="tour-notes" id="notes-grand-british-isles">
+  <div class="tour-notes-title">📋 Tour Notes &amp; Customisation — Grand British Isles Explorer</div>
+  
+  <div class="notes-meal-summary">
+    <div class="notes-meal-summary-title">Selected Meals Summary (from checkboxes above)</div>
+    <div class="notes-meal-summary-text" id="meal-summary-grandbritishisles">Click "Save Notes" to generate meal summary.</div>
+  </div>
+
+  <div class="notes-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;">
+    <div class="notes-field">
+      <label>Group Name / Reference</label>
+      <input type="text" id="n-group-grandbritishisles" placeholder="e.g. Smith Family Group 2026">
+    </div>
+    <div class="notes-field">
+      <label>Departure Date</label>
+      <input type="date" id="n-date-grandbritishisles">
+    </div>
+    <div class="notes-field">
+      <label>No. of Passengers</label>
+      <input type="number" id="n-pax-grandbritishisles" placeholder="16" min="1" max="60">
+    </div>
+    <div class="notes-field">
+      <label>Lead Contact Name</label>
+      <input type="text" id="n-contact-grandbritishisles" placeholder="Contact name">
+    </div>
+    <div class="notes-field">
+      <label>Contact Email</label>
+      <input type="email" id="n-email-grandbritishisles" placeholder="email@example.com">
+    </div>
+    <div class="notes-field">
+      <label>Special Requirements</label>
+      <select id="n-diet-grandbritishisles">
+        <option value="">None</option>
+        <option>Vegetarian</option>
+        <option>Vegan</option>
+        <option>Halal</option>
+        <option>Gluten Free</option>
+        <option>Mixed dietary needs</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:10px;">
+    <label>General Tour Notes &amp; Special Requests</label>
+    <textarea id="n-notes-grandbritishisles" placeholder="Add any specific requests, accessibility needs, room preferences, visa requirements, notes for tour manager..."></textarea>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:12px;">
+    <label>Internal / Operator Notes (not shown to guests)</label>
+    <textarea id="n-internal-grandbritishisles" placeholder="Pricing notes, supplier contacts, margin info, booking references..."></textarea>
+  </div>
+
+  <div class="notes-save-row">
+    <button class="notes-save-btn" onclick="saveNotes('grandbritishisles','grand-british-isles',16)">💾 Save &amp; Generate Summary</button>
+    <button class="notes-save-btn" onclick="clearNotes('grandbritishisles')" style="background:#6b7280;">✕ Clear</button>
+    <button class="notes-save-btn" onclick="window.print()" style="background:#c9a84c;color:#1a3a5c;">🖨 Print / Save PDF</button>
+    <span class="notes-status" id="status-grandbritishisles"></span>
+  </div>
+</div>
+</div>
 </section>
 <section class="tour-sec" id="tour-london-paris-castles">
   <div class="tour-hero"><img src="photo-paris.jpg" alt="London, Paris & English Castles"></div>
@@ -400,7 +495,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
         <p class="hb-diet-note">100% international International</p>
       </div>
     
-      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="London, Paris %26 English Castles.png" alt="london-paris-castles route" loading="lazy"/></div></div>
+      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="london-paris-&-english-castles.png" alt="london-paris-castles route" loading="lazy"/></div></div>
     <div class="hb-section hb-full"><h4 class="hb-sec-hd">⭐ Don't Miss</h4><ul class="hb-dm-list"><li>The masala dosa at local restaurant — crispy, authentic, and huge</li><li>The view from Eiffel Tower 2nd level — you can see all of Paris\</li><li>The Disney parade at 5:30 PM — see all characters in one spectacular show</li></ul></div>
   </div>
 </div></div>
@@ -426,19 +521,81 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
 
   <div class="padded">
     <h3 class="sec-hd" style="color:#0e6e55">Day-by-Day Itinerary</h3>
-    <div class="itin"><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 1</span><span class="day-ttl">Arrival in Paris — City of Lights</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb17" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml17" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md17" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Arrive at Charles de Gaulle Airport. Transfer to hotel (The Jangle Hotel CDG or similar 4-star). Check-in and freshen up. Evening: Welcome dinner at a celebrated Paris brasserie. Orientation walk of local area near hotel. Briefing on 3 days in Paris.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 2</span><span class="day-ttl">Paris City Tour — Eiffel Tower & Seine Cruise</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb18" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml18" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md18" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Panoramic Paris city tour: Champs-Élysées (most beautiful avenue), Arc de Triomphe (Napoleon's monument), Place de la Concorde (where guillotine stood), Opéra Garnier (inspiration for Phantom), Louvre Museum (exterior, glass pyramid). Lunch at a Parisian café — authentic South quality cuisine, family-run since 1980s. Afternoon: Eiffel Tower — ascend to 2nd level for panoramic views of Paris (option to summit for extra fee). Seine River cruise — see Notre-Dame, Musée d'Orsay, bridges of Paris from the water. Evening: Dinner at a classic Paris brasserie — Mughlai and North international dishes in elegant setting.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 3</span><span class="day-ttl">Disneyland Paris — Full Day Magic</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb19" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml19" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md19" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Transfer to Disneyland Paris (45 minutes). Full day at either Disneyland Park (Sleeping Beauty's Castle, classic Disney magic, 40+ attractions) OR Walt Disney Studios Park (behind-the-scenes cinema, stunt shows, Pixar attractions). Park hopper available for both parks. packed lunch options available at selected restaurants: Hakuna Matata (African/international fusion), Plaza Gardens Restaurant (buffet with veg options). Meet Disney characters, watch parades, experience thrilling rides for all ages. Evening: Return to Paris. Dinner at a classic Paris brasserie — international set meals, relaxed atmosphere after big day.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 4</span><span class="day-ttl">Paris to London via Thornbury Castle</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb20" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml20" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md20" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Morning at leisure in Paris OR optional visit to Montmartre/Sacré-Cœur (artists' quarter, basilica with city views). Lunch at local restaurant (farewell Paris meal). Afternoon: Eurostar train from Paris Gare du Nord to London St Pancras (2 hours 15 minutes, under the Channel). Transfer to Thornbury Castle (2.5 hours drive through English countryside). Evening: Check-in at Thornbury Castle — your Tudor castle hotel. Welcome dinner with quality options arranged by castle chef. Explore ramparts, wine cellar, and historic rooms. Sleep where Henry VIII slept.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 5</span><span class="day-ttl">Windsor Castle & London Arrival</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb21" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml21" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md21" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at castle. Late checkout (11 AM). Leisurely morning exploring Thornbury Castle grounds, gardens, and historic rooms. Lunch at The Mango Tree (Windsor) — contemporary quality cuisine near castle. Afternoon: Visit Windsor Castle — Queen's official residence, State Apartments (opulent rooms), St George's Chapel (Harry & Meghan's wedding, royal tombs), Queen's Dolls' House (world's most famous). Transfer to London (1 hour). Check-in at Heston Hyde Hotel, Hounslow. Evening: Dinner at a celebrated local restaurant (King's Cross) — vintage-style cuisine, vintage railway atmosphere.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 6</span><span class="day-ttl">Iconic London — City Tour, Tower & London Eye</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb22" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml22" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md22" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. London city tour: Big Ben, Houses of Parliament, Westminster Abbey (exterior), Buckingham Palace (Changing of Guard if scheduled), Trafalgar Square, Piccadilly Circus. Lunch at a Covent Garden brasserie. Afternoon: Tower of London with Beefeater guide — Crown Jewels including Crown Jewels collection, White Tower, medieval history. London Eye experience — panoramic views. Evening: Dinner at local restaurant (Whitechapel) — Punjabi grill specialties, famous for seekh kebabs (veg options excellent).</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 7</span><span class="day-ttl">Lords Cricket, Bicester Village & Departure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb23" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml23" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md23" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Visit Lords Cricket Stadium — "Home of Cricket" tour including Long Room, players' dressing rooms, museum, see the Ashes urn. If closed: extended Tower visit. Lunch at Gymkhana (Mayfair) — Michelin-starred cuisine (tasting menu). Afternoon: Bicester Village outlet shopping — luxury brands at discounted prices, VIP shopping card included. Transfer to Heathrow Airport (45 minutes). Departure flights to India. End of 7-day twin-city journey with memories of Paris elegance, castle luxury, and London icons.</p></div></div>
+    <div class="itin"><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 1</span><span class="day-ttl">Arrival in Paris — City of Lights</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb17"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml17"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md17"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Arrive at Charles de Gaulle Airport. Transfer to hotel (The Jangle Hotel CDG or similar 4-star). Check-in and freshen up. Evening: Welcome dinner at a celebrated Paris brasserie. Orientation walk of local area near hotel. Briefing on 3 days in Paris.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 2</span><span class="day-ttl">Paris City Tour — Eiffel Tower & Seine Cruise</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb18"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml18"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md18"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Panoramic Paris city tour: Champs-Élysées (most beautiful avenue), Arc de Triomphe (Napoleon's monument), Place de la Concorde (where guillotine stood), Opéra Garnier (inspiration for Phantom), Louvre Museum (exterior, glass pyramid). Lunch at a Parisian café — authentic South quality cuisine, family-run since 1980s. Afternoon: Eiffel Tower — ascend to 2nd level for panoramic views of Paris (option to summit for extra fee). Seine River cruise — see Notre-Dame, Musée d'Orsay, bridges of Paris from the water. Evening: Dinner at a classic Paris brasserie — Mughlai and North international dishes in elegant setting.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 3</span><span class="day-ttl">Disneyland Paris — Full Day Magic</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb19"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml19"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md19"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Transfer to Disneyland Paris (45 minutes). Full day at either Disneyland Park (Sleeping Beauty's Castle, classic Disney magic, 40+ attractions) OR Walt Disney Studios Park (behind-the-scenes cinema, stunt shows, Pixar attractions). Park hopper available for both parks. packed lunch options available at selected restaurants: Hakuna Matata (African/international fusion), Plaza Gardens Restaurant (buffet with veg options). Meet Disney characters, watch parades, experience thrilling rides for all ages. Evening: Return to Paris. Dinner at a classic Paris brasserie — international set meals, relaxed atmosphere after big day.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 4</span><span class="day-ttl">Paris to London via Thornbury Castle</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb20"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml20"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md20"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Morning at leisure in Paris OR optional visit to Montmartre/Sacré-Cœur (artists' quarter, basilica with city views). Lunch at local restaurant (farewell Paris meal). Afternoon: Eurostar train from Paris Gare du Nord to London St Pancras (2 hours 15 minutes, under the Channel). Transfer to Thornbury Castle (2.5 hours drive through English countryside). Evening: Check-in at Thornbury Castle — your Tudor castle hotel. Welcome dinner with quality options arranged by castle chef. Explore ramparts, wine cellar, and historic rooms. Sleep where Henry VIII slept.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 5</span><span class="day-ttl">Windsor Castle & London Arrival</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb21"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml21"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md21"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at castle. Late checkout (11 AM). Leisurely morning exploring Thornbury Castle grounds, gardens, and historic rooms. Lunch at a Windsor town centre restaurant. Afternoon: Visit Windsor Castle — Queen's official residence, State Apartments (opulent rooms), St George's Chapel (Harry & Meghan's wedding, royal tombs), Queen's Dolls' House (world's most famous). Transfer to London (1 hour). Check-in at Heston Hyde Hotel, Hounslow. Evening: Dinner at a celebrated local restaurant (King's Cross) — vintage-style cuisine, vintage railway atmosphere.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 6</span><span class="day-ttl">Iconic London — City Tour, Tower & London Eye</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb22"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml22"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md22"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. London city tour: Big Ben, Houses of Parliament, Westminster Abbey (exterior), Buckingham Palace (Changing of Guard if scheduled), Trafalgar Square, Piccadilly Circus. Lunch at a Covent Garden brasserie. Afternoon: Tower of London with Beefeater guide — Crown Jewels including Crown Jewels collection, White Tower, medieval history. London Eye experience — panoramic views. Evening: Dinner at local restaurant (Whitechapel) — Punjabi grill specialties, famous for seekh kebabs (veg options excellent).</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 7</span><span class="day-ttl">Lords Cricket, Bicester Village & Departure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb23"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml23"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md23"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Visit Lords Cricket Stadium — "Home of Cricket" tour including Long Room, players' dressing rooms, museum, see the Ashes urn. If closed: extended Tower visit. Lunch at a Michelin-starred Mayfair restaurant. Afternoon: Bicester Village outlet shopping — luxury brands at discounted prices, VIP shopping card included. Transfer to Heathrow Airport (45 minutes). Departure flights to India. End of 7-day twin-city journey with memories of Paris elegance, castle luxury, and London icons.</p></div></div>
   </div>
 
   <div class="tour-foot padded" style="border-top:2px solid #0e6e5530">
     <p>Itinerary subject to change. All tours operate on 16-seater private coaches with experienced UK tour managers. Bookings &amp; pricing: <strong>international@tripfactory.com</strong> &nbsp;·&nbsp; ORN Group / TripFactory UK</p>
   </div>
+
+<div class="padded">
+<div class="tour-notes" id="notes-london-paris-castles">
+  <div class="tour-notes-title">📋 Tour Notes &amp; Customisation — London, Paris & English Castles</div>
+  
+  <div class="notes-meal-summary">
+    <div class="notes-meal-summary-title">Selected Meals Summary (from checkboxes above)</div>
+    <div class="notes-meal-summary-text" id="meal-summary-londonpariscastles">Click "Save Notes" to generate meal summary.</div>
+  </div>
+
+  <div class="notes-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;">
+    <div class="notes-field">
+      <label>Group Name / Reference</label>
+      <input type="text" id="n-group-londonpariscastles" placeholder="e.g. Smith Family Group 2026">
+    </div>
+    <div class="notes-field">
+      <label>Departure Date</label>
+      <input type="date" id="n-date-londonpariscastles">
+    </div>
+    <div class="notes-field">
+      <label>No. of Passengers</label>
+      <input type="number" id="n-pax-londonpariscastles" placeholder="16" min="1" max="60">
+    </div>
+    <div class="notes-field">
+      <label>Lead Contact Name</label>
+      <input type="text" id="n-contact-londonpariscastles" placeholder="Contact name">
+    </div>
+    <div class="notes-field">
+      <label>Contact Email</label>
+      <input type="email" id="n-email-londonpariscastles" placeholder="email@example.com">
+    </div>
+    <div class="notes-field">
+      <label>Special Requirements</label>
+      <select id="n-diet-londonpariscastles">
+        <option value="">None</option>
+        <option>Vegetarian</option>
+        <option>Vegan</option>
+        <option>Halal</option>
+        <option>Gluten Free</option>
+        <option>Mixed dietary needs</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:10px;">
+    <label>General Tour Notes &amp; Special Requests</label>
+    <textarea id="n-notes-londonpariscastles" placeholder="Add any specific requests, accessibility needs, room preferences, visa requirements, notes for tour manager..."></textarea>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:12px;">
+    <label>Internal / Operator Notes (not shown to guests)</label>
+    <textarea id="n-internal-londonpariscastles" placeholder="Pricing notes, supplier contacts, margin info, booking references..."></textarea>
+  </div>
+
+  <div class="notes-save-row">
+    <button class="notes-save-btn" onclick="saveNotes('londonpariscastles','london-paris-castles',7)">💾 Save &amp; Generate Summary</button>
+    <button class="notes-save-btn" onclick="clearNotes('londonpariscastles')" style="background:#6b7280;">✕ Clear</button>
+    <button class="notes-save-btn" onclick="window.print()" style="background:#c9a84c;color:#1a3a5c;">🖨 Print / Save PDF</button>
+    <span class="notes-status" id="status-londonpariscastles"></span>
+  </div>
+</div>
+</div>
 </section>
 <section class="tour-sec" id="tour-lake-district-yorkshire">
   <div class="tour-hero"><img src="photo-lakes.jpg" alt="Lake District & Yorkshire Dales Discovery"></div>
@@ -473,8 +630,8 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
         <p class="hb-diet-note">100% international International</p>
       </div>
     
-      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="Lake District %26 Yorkshire Dales Discovery.png" alt="lake-district-yorkshire route" loading="lazy"/></div></div>
-    <div class="hb-section hb-full"><h4 class="hb-sec-hd">⭐ Don't Miss</h4><ul class="hb-dm-list"><li>The silver set meal at Aagrah — the presentation is spectacular, and the food is authentic Kashmiri</li><li>Stepping stones across River Wharfe at Bolton Abbey — iconic Yorkshire photo opportunity</li><li>The Grasmere Gingerbread — Sarah Nelson invented this in 1854, and it\</li></ul></div>
+      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="lake-district-&-yorkshire-dales-di.png" alt="lake-district-yorkshire route" loading="lazy"/></div></div>
+    <div class="hb-section hb-full"><h4 class="hb-sec-hd">⭐ Don't Miss</h4><ul class="hb-dm-list"><li>A lakeside dinner at The Ro Hotel Windermere — stunning views over the water as the sun sets</li><li>Stepping stones across River Wharfe at Bolton Abbey — iconic Yorkshire photo opportunity</li><li>The Grasmere Gingerbread — Sarah Nelson invented this in 1854, and it\</li></ul></div>
   </div>
 </div></div>
 
@@ -499,18 +656,80 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
 
   <div class="padded">
     <h3 class="sec-hd" style="color:#0e6e55">Day-by-Day Itinerary</h3>
-    <div class="itin"><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 1</span><span class="day-ttl">Arrival Manchester, Transfer to Yorkshire</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb24" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml24" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md24" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Arrive at Manchester Airport. Transfer to Weetwood Hall Estate, Leeds (1 hour). Check-in and explore 17th-century manor house grounds — Jacobean architecture, parkland walks, 9-hole golf course. Evening: Dinner at a celebrated Leeds restaurant (Leeds) — Yorkshire-based international chain founded by Kashmiri immigrants, excellent international selection including their famous silver set meal presentation.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 2</span><span class="day-ttl">Yorkshire Dales, Transfer to Lake District</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb25" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml25" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md25" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Drive to Yorkshire Dales National Park — England's most scenic dales. Visit Bolton Abbey — ruined 12th-century priory by River Wharfe, stepping stones across river. Aysgarth Falls — triple cascade waterfalls, featured in Robin Hood Prince of Thieves. Hawes village — Wensleydale cheese tasting at source (the "Wallace and Gromit" cheese). Lunch at The international Lounge (Skipton) — traditional curries. Afternoon: Scenic drive to Lake District (1.5 hours). Check-in at The Ro Hotel, Windermere. Orientation walk of Bowness-on-Windermere — lakeside village atmosphere. Evening: Dinner at The Cottage (Bowness) — lakeside quality cuisine with views.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 3</span><span class="day-ttl">Full Day Lake District — Windermere, Ambleside, Grasmere</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb26" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml26" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md26" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Windermere Lake cruise from Bowness to Ambleside — traditional steamer or modern launch, surrounded by fells. Ambleside — Bridge House (tiny house over stream), Waterhead pier, shops. Continue to Grasmere — Dove Cottage (William Wordsworth's home where he wrote "I wandered lonely as a cloud"), Wordsworth Museum, Grasmere Gingerbread Shop (unique recipe since 1854, only sold here). Lunch at a local Ambleside restaurant — Himalayan/Nepalese cuisine with menu options. Afternoon: Rydal Mount (Wordsworth's later home), Rydal Water walk. Evening: Return to Windermere. Dinner at Bombay Spice — traditional curries.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 4</span><span class="day-ttl">Lake District Day 2 — Ullswater, Keswick, Castlerigg</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb27" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml27" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md27" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Drive to Ullswater — England's most beautiful lake according to Wordsworth. Ullswater Steamers cruise to Howtown — traditional wooden launch boats. Optional: hike to Aira Force waterfall (50ft cascade through woodland, National Trust). Lunch at a local Keswick restaurant. Afternoon: Keswick — market town, Castlerigg Stone Circle (5,000-year-old stone circle with mountain backdrop — more atmospheric than Stonehenge, free to enter), Derwentwater lakeside walk. Evening: Return to Windermere. Dinner at The Royal Oak (Bowness) — extensive international menu, local favourite.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 5</span><span class="day-ttl">Haweswater Retreat — Wildlife & Stargazing</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb28" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml28" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md28" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Drive to Haweswater Reservoir (30 minutes) — remote, dramatic landscape, valley with no phone signal. Check-in at The Haweswater Hotel — your digital detox retreat. Lunch at hotel — quality options arranged. Afternoon: Day at leisure — red squirrel spotting (endangered native species, come right up to hotel), peregrine falcon watching, walking trails, fishing (permit required), photography, or simply relax by fireside with book. Evening: Dinner at The Haweswater Hotel with quality options. Stargazing with hot chocolate — minimal light pollution means Milky Way visible to naked eye, one of best dark sky sites in England.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 6</span><span class="day-ttl">York Minster, Medieval City & Departure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb29" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml29" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md29" checked><span>🌙 Dinner</span></label></div>
+    <div class="itin"><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 1</span><span class="day-ttl">Arrival Manchester, Transfer to Yorkshire</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb24"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml24"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md24"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Arrive at Manchester Airport. Transfer to Weetwood Hall Estate, Leeds (1 hour). Check-in and explore 17th-century manor house grounds — Jacobean architecture, parkland walks, 9-hole golf course. Evening: Dinner at a celebrated Leeds restaurant (Leeds) — Yorkshire-based international chain founded by Kashmiri immigrants, excellent international selection including their famous silver set meal presentation.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 2</span><span class="day-ttl">Yorkshire Dales, Transfer to Lake District</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb25"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml25"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md25"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Drive to Yorkshire Dales National Park — England's most scenic dales. Visit Bolton Abbey — ruined 12th-century priory by River Wharfe, stepping stones across river. Aysgarth Falls — triple cascade waterfalls, featured in Robin Hood Prince of Thieves. Hawes village — Wensleydale cheese tasting at source (the "Wallace and Gromit" cheese). Lunch at The international Lounge (Skipton) — traditional curries. Afternoon: Scenic drive to Lake District (1.5 hours). Check-in at The Ro Hotel, Windermere. Orientation walk of Bowness-on-Windermere — lakeside village atmosphere. Evening: Dinner at The Cottage (Bowness) — lakeside quality cuisine with views.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 3</span><span class="day-ttl">Full Day Lake District — Windermere, Ambleside, Grasmere</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb26"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml26"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md26"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Windermere Lake cruise from Bowness to Ambleside — traditional steamer or modern launch, surrounded by fells. Ambleside — Bridge House (tiny house over stream), Waterhead pier, shops. Continue to Grasmere — Dove Cottage (William Wordsworth's home where he wrote "I wandered lonely as a cloud"), Wordsworth Museum, Grasmere Gingerbread Shop (unique recipe since 1854, only sold here). Lunch at a local Ambleside restaurant — Himalayan/Nepalese cuisine with menu options. Afternoon: Rydal Mount (Wordsworth's later home), Rydal Water walk. Evening: Return to Windermere. Dinner at Bombay Spice — traditional curries.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 4</span><span class="day-ttl">Lake District Day 2 — Ullswater, Keswick, Castlerigg</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb27"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml27"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md27"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Drive to Ullswater — England's most beautiful lake according to Wordsworth. Ullswater Steamers cruise to Howtown — traditional wooden launch boats. Optional: hike to Aira Force waterfall (50ft cascade through woodland, National Trust). Lunch at a local Keswick restaurant. Afternoon: Keswick — market town, Castlerigg Stone Circle (5,000-year-old stone circle with mountain backdrop — more atmospheric than Stonehenge, free to enter), Derwentwater lakeside walk. Evening: Return to Windermere. Dinner at The Royal Oak (Bowness) — extensive international menu, local favourite.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 5</span><span class="day-ttl">Haweswater Retreat — Wildlife & Stargazing</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb28"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml28"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md28"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Drive to Haweswater Reservoir (30 minutes) — remote, dramatic landscape, valley with no phone signal. Check-in at The Haweswater Hotel — your digital detox retreat. Lunch at hotel — quality options arranged. Afternoon: Day at leisure — red squirrel spotting (endangered native species, come right up to hotel), peregrine falcon watching, walking trails, fishing (permit required), photography, or simply relax by fireside with book. Evening: Dinner at The Haweswater Hotel with quality options. Stargazing with hot chocolate — minimal light pollution means Milky Way visible to naked eye, one of best dark sky sites in England.</p></div><div class="day-block"><div class="day-hdr" style="background:#0e6e55"><span class="day-num">Day 6</span><span class="day-ttl">York Minster, Medieval City & Departure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb29"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml29"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md29"><span>🌙 Dinner</span></label></div>
 <p class="day-desc">Breakfast and checkout. Drive to York (2 hours). Check-in at Judges Court York (city centre, drop luggage). York Minster cathedral tour — largest Gothic cathedral in Northern Europe, Great East Window (size of tennis court), Undercroft (Roman ruins beneath), optional tower climb. Walk medieval city walls — best preserved in England. Shambles street — inspiration for Diagon Alley, overhanging timber-framed shops. Lunch at Mumbai Lounge (York) — authentic Mumbai street food. Afternoon: Transfer to Manchester Airport (1.5 hours) OR Leeds Bradford Airport (45 minutes) for departure. End of 6-day nature and heritage journey.</p></div></div>
   </div>
 
   <div class="tour-foot padded" style="border-top:2px solid #0e6e5530">
     <p>Itinerary subject to change. All tours operate on 16-seater private coaches with experienced UK tour managers. Bookings &amp; pricing: <strong>international@tripfactory.com</strong> &nbsp;·&nbsp; ORN Group / TripFactory UK</p>
   </div>
+
+<div class="padded">
+<div class="tour-notes" id="notes-lake-district-yorkshire">
+  <div class="tour-notes-title">📋 Tour Notes &amp; Customisation — Lake District & Yorkshire Dales</div>
+  
+  <div class="notes-meal-summary">
+    <div class="notes-meal-summary-title">Selected Meals Summary (from checkboxes above)</div>
+    <div class="notes-meal-summary-text" id="meal-summary-lakedistrictyorkshire">Click "Save Notes" to generate meal summary.</div>
+  </div>
+
+  <div class="notes-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;">
+    <div class="notes-field">
+      <label>Group Name / Reference</label>
+      <input type="text" id="n-group-lakedistrictyorkshire" placeholder="e.g. Smith Family Group 2026">
+    </div>
+    <div class="notes-field">
+      <label>Departure Date</label>
+      <input type="date" id="n-date-lakedistrictyorkshire">
+    </div>
+    <div class="notes-field">
+      <label>No. of Passengers</label>
+      <input type="number" id="n-pax-lakedistrictyorkshire" placeholder="16" min="1" max="60">
+    </div>
+    <div class="notes-field">
+      <label>Lead Contact Name</label>
+      <input type="text" id="n-contact-lakedistrictyorkshire" placeholder="Contact name">
+    </div>
+    <div class="notes-field">
+      <label>Contact Email</label>
+      <input type="email" id="n-email-lakedistrictyorkshire" placeholder="email@example.com">
+    </div>
+    <div class="notes-field">
+      <label>Special Requirements</label>
+      <select id="n-diet-lakedistrictyorkshire">
+        <option value="">None</option>
+        <option>Vegetarian</option>
+        <option>Vegan</option>
+        <option>Halal</option>
+        <option>Gluten Free</option>
+        <option>Mixed dietary needs</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:10px;">
+    <label>General Tour Notes &amp; Special Requests</label>
+    <textarea id="n-notes-lakedistrictyorkshire" placeholder="Add any specific requests, accessibility needs, room preferences, visa requirements, notes for tour manager..."></textarea>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:12px;">
+    <label>Internal / Operator Notes (not shown to guests)</label>
+    <textarea id="n-internal-lakedistrictyorkshire" placeholder="Pricing notes, supplier contacts, margin info, booking references..."></textarea>
+  </div>
+
+  <div class="notes-save-row">
+    <button class="notes-save-btn" onclick="saveNotes('lakedistrictyorkshire','lake-district-yorkshire',6)">💾 Save &amp; Generate Summary</button>
+    <button class="notes-save-btn" onclick="clearNotes('lakedistrictyorkshire')" style="background:#6b7280;">✕ Clear</button>
+    <button class="notes-save-btn" onclick="window.print()" style="background:#c9a84c;color:#1a3a5c;">🖨 Print / Save PDF</button>
+    <span class="notes-status" id="status-lakedistrictyorkshire"></span>
+  </div>
+</div>
+</div>
 </section>
 <section class="tour-sec" id="tour-ultimate-heritage">
   <div class="tour-hero"><img src="photo-heritage.jpg" alt="Ultimate UK Heritage & Castles"></div>
@@ -545,7 +764,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
         <p class="hb-diet-note">100% international International</p>
       </div>
     
-      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="Ultimate UK Heritage %26 Castles.png" alt="ultimate-heritage route" loading="lazy"/></div></div>
+      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="ultimate-uk-heritage-&-castles.png" alt="ultimate-heritage route" loading="lazy"/></div></div>
     <div class="hb-section hb-full"><h4 class="hb-sec-hd">⭐ Don't Miss</h4><ul class="hb-dm-list"><li>The Rajasthani set meal at The Ivy — this is authentic, not adapted for British palate</li><li>The Coronation Chair in Westminster Abbey — every English king and queen has been crowned in this chair since 1308</li><li>St George\</li></ul></div>
   </div>
 </div></div>
@@ -571,22 +790,84 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
 
   <div class="padded">
     <h3 class="sec-hd" style="color:#1a3a5c">Day-by-Day Itinerary</h3>
-    <div class="itin"><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 1</span><span class="day-ttl">Arrival in London — Historic Capital</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb30" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml30" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md30" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Arrive at London Heathrow. Transfer to Heston Hyde Hotel, Hounslow. Check-in. Welcome dinner at The Ivy (London) — authentic Rajasthani cuisine with traditional décor and folk performances. Tour orientation covering 10-day heritage journey.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 2</span><span class="day-ttl">Royal London — Tower, Westminster & Thames</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb31" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml31" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md31" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Tower of London with Beefeater guide — Crown Jewels including Crown Jewels collection, White Tower, medieval history, Traitors' Gate. Lunch at a Covent Garden brasserie. Afternoon: Westminster Abbey tour — coronation church of English monarchs since 1066, Poets' Corner, Royal Tombs. Big Ben and Houses of Parliament (exterior). Thames River walk. Dinner at a celebrated local restaurant (King's Cross) — vintage-style cuisine.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 3</span><span class="day-ttl">Windsor Castle & Transfer to Thornbury</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb32" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml32" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md32" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Visit Windsor Castle — Queen's official residence, State Apartments, St George's Chapel (Harry & Meghan's wedding), Queen's Dolls' House. Lunch at The Mango Tree (Windsor) — contemporary quality cuisine. Afternoon: Drive to Thornbury (2 hours). Check-in at Thornbury Castle — your Tudor castle. Explore grounds, wine cellar, ramparts. Evening: Castle banquet dinner with quality options. Sleep where royalty slept.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 4</span><span class="day-ttl">Cotswolds, Bath & Castle Life</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb33" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml33" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md33" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at castle. Cotswolds tour: Bibury (Arlington Row — most photographed cottages in England), Bourton-on-the-Water ("Venice of the Cotswolds"), Stow-on-the-Wold. Lunch at a Bath restaurant. Afternoon: Bath city tour — Roman Baths (2,000-year-old thermal waters, walk where Romans walked), Royal Crescent, Bath Abbey. Return to Thornbury Castle. Evening: Day at leisure at castle — explore gardens, enjoy afternoon tea, relax in historic surroundings. Dinner with menu options.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 5</span><span class="day-ttl">Stratford-upon-Avon & Transfer to York</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb34" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml34" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md34" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Visit Stratford-upon-Avon — Shakespeare's Birthplace (restored 16th-century house), Anne Hathaway's Cottage (thatched-roof romantic hideaway), Holy Trinity Church (Shakespeare's grave). Lunch at The a local Stratford restaurant (Stratford) — international fusion. Afternoon: Drive to York (2.5 hours). Check-in at Judges Court York — historic city centre location. Evening: Dinner at Mumbai Lounge (York) — authentic Mumbai street food.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 6</span><span class="day-ttl">York Minster, Medieval Walls & Cathedral City</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb35" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml35" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md35" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. York Minster cathedral tour — Great East Window (largest medieval stained glass in world), Undercroft (Roman ruins beneath cathedral), tower climb optional. Walk medieval city walls — 2-mile circuit, best preserved in England. Shambles street — inspiration for Diagon Alley. National Railway Museum — largest railway museum in world, free entry. Lunch at The international Ocean (York) — traditional curries. Afternoon: Continued York exploration. Evening: Dinner at Akbar's (York) — North international and Bengali cuisine.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 7</span><span class="day-ttl">Yorkshire Dales & Transfer to Lake District</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb36" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml36" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md36" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Drive through Yorkshire Dales: Bolton Abbey (ruined priory by river), Aysgarth Falls (waterfalls), Hawes (Wensleydale cheese tasting). Lunch at The international Lounge (Skipton) — traditional curries. Afternoon: Continue to Lake District (1.5 hours). Check-in at The Ro Hotel, Windermere. Evening: Dinner at The Cottage (Bowness) — lakeside quality cuisine.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 8</span><span class="day-ttl">Lake District — Wordsworth, Beatrix Potter & Cruises</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb37" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml37" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md37" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Windermere Lake cruise. Visit Hill Top Farm (Beatrix Potter's home — preserved exactly as she left it), Hawkshead village. Lunch at a local Ambleside restaurant. Afternoon: Dove Cottage (Wordsworth's home), Grasmere Gingerbread Shop, Rydal Mount. Evening: Dinner at Bombay Spice (Windermere) — traditional curries.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 9</span><span class="day-ttl">Transfer to Edinburgh — Dalhousie Castle</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb38" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml38" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md38" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Scenic drive to Edinburgh via Hadrian's Wall (3.5 hours). Photo stops at Roman ruins. Lunch at a Carlisle restaurant. Afternoon: Check-in at Dalhousie Castle — your 13th-century fortress. Falconry experience: handle hawks, owls, and eagles with expert falconers. Evening: Castle dinner with quality options. Relax in Aqueous Spa.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 10</span><span class="day-ttl">Edinburgh City Tour & Departure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb39" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml39" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md39" checked><span>🌙 Dinner</span></label></div>
+    <div class="itin"><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 1</span><span class="day-ttl">Arrival in London — Historic Capital</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb30"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml30"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md30"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Arrive at London Heathrow. Transfer to Heston Hyde Hotel, Hounslow. Check-in. Welcome dinner at The Ivy (London) — authentic Rajasthani cuisine with traditional décor and folk performances. Tour orientation covering 10-day heritage journey.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 2</span><span class="day-ttl">Royal London — Tower, Westminster & Thames</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb31"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml31"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md31"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Tower of London with Beefeater guide — Crown Jewels including Crown Jewels collection, White Tower, medieval history, Traitors' Gate. Lunch at a Covent Garden brasserie. Afternoon: Westminster Abbey tour — coronation church of English monarchs since 1066, Poets' Corner, Royal Tombs. Big Ben and Houses of Parliament (exterior). Thames River walk. Dinner at a celebrated local restaurant (King's Cross) — vintage-style cuisine.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 3</span><span class="day-ttl">Windsor Castle & Transfer to Thornbury</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb32"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml32"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md32"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Visit Windsor Castle — Queen's official residence, State Apartments, St George's Chapel (Harry & Meghan's wedding), Queen's Dolls' House. Lunch at a Windsor town centre restaurant. Afternoon: Drive to Thornbury (2 hours). Check-in at Thornbury Castle — your Tudor castle. Explore grounds, wine cellar, ramparts. Evening: Castle banquet dinner with quality options. Sleep where royalty slept.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 4</span><span class="day-ttl">Cotswolds, Bath & Castle Life</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb33"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml33"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md33"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at castle. Cotswolds tour: Bibury (Arlington Row — most photographed cottages in England), Bourton-on-the-Water ("Venice of the Cotswolds"), Stow-on-the-Wold. Lunch at a Bath restaurant. Afternoon: Bath city tour — Roman Baths (2,000-year-old thermal waters, walk where Romans walked), Royal Crescent, Bath Abbey. Return to Thornbury Castle. Evening: Day at leisure at castle — explore gardens, enjoy afternoon tea, relax in historic surroundings. Dinner with menu options.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 5</span><span class="day-ttl">Stratford-upon-Avon & Transfer to York</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb34"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml34"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md34"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Visit Stratford-upon-Avon — Shakespeare's Birthplace (restored 16th-century house), Anne Hathaway's Cottage (thatched-roof romantic hideaway), Holy Trinity Church (Shakespeare's grave). Lunch at The a local Stratford restaurant (Stratford) — international fusion. Afternoon: Drive to York (2.5 hours). Check-in at Judges Court York — historic city centre location. Evening: Dinner at Mumbai Lounge (York) — authentic Mumbai street food.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 6</span><span class="day-ttl">York Minster, Medieval Walls & Cathedral City</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb35"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml35"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md35"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. York Minster cathedral tour — Great East Window (largest medieval stained glass in world), Undercroft (Roman ruins beneath cathedral), tower climb optional. Walk medieval city walls — 2-mile circuit, best preserved in England. Shambles street — inspiration for Diagon Alley. National Railway Museum — largest railway museum in world, free entry. Lunch at The international Ocean (York) — traditional curries. Afternoon: Continued York exploration. Evening: Dinner at Akbar's (York) — North international and Bengali cuisine.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 7</span><span class="day-ttl">Yorkshire Dales & Transfer to Lake District</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb36"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml36"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md36"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Drive through Yorkshire Dales: Bolton Abbey (ruined priory by river), Aysgarth Falls (waterfalls), Hawes (Wensleydale cheese tasting). Lunch at The international Lounge (Skipton) — traditional curries. Afternoon: Continue to Lake District (1.5 hours). Check-in at The Ro Hotel, Windermere. Evening: Dinner at The Cottage (Bowness) — lakeside quality cuisine.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 8</span><span class="day-ttl">Lake District — Wordsworth, Beatrix Potter & Cruises</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb37"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml37"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md37"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Windermere Lake cruise. Visit Hill Top Farm (Beatrix Potter's home — preserved exactly as she left it), Hawkshead village. Lunch at a local Ambleside restaurant. Afternoon: Dove Cottage (Wordsworth's home), Grasmere Gingerbread Shop, Rydal Mount. Evening: Dinner at Bombay Spice (Windermere) — traditional curries.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 9</span><span class="day-ttl">Transfer to Edinburgh — Dalhousie Castle</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb38"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml38"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md38"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Scenic drive to Edinburgh via Hadrian's Wall (3.5 hours). Photo stops at Roman ruins. Lunch at a Carlisle restaurant. Afternoon: Check-in at Dalhousie Castle — your 13th-century fortress. Falconry experience: handle hawks, owls, and eagles with expert falconers. Evening: Castle dinner with quality options. Relax in Aqueous Spa.</p></div><div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><span class="day-num">Day 10</span><span class="day-ttl">Edinburgh City Tour & Departure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb39"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml39"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md39"><span>🌙 Dinner</span></label></div>
 <p class="day-desc">Breakfast at castle. Edinburgh Castle — Crown Jewels of Scotland, Stone of Destiny, Great Hall. Royal Mile walk — from Castle to Holyrood Palace, St Giles' Cathedral, historic closes. Lunch at a celebrated Edinburgh restaurant — contemporary international. Afternoon: Transfer to Edinburgh Airport (30 minutes). Departure flights.</p></div></div>
   </div>
 
   <div class="tour-foot padded" style="border-top:2px solid #1a3a5c30">
     <p>Itinerary subject to change. All tours operate on 16-seater private coaches with experienced UK tour managers. Bookings &amp; pricing: <strong>international@tripfactory.com</strong> &nbsp;·&nbsp; ORN Group / TripFactory UK</p>
   </div>
+
+<div class="padded">
+<div class="tour-notes" id="notes-ultimate-heritage">
+  <div class="tour-notes-title">📋 Tour Notes &amp; Customisation — Ultimate UK Heritage & Castles</div>
+  
+  <div class="notes-meal-summary">
+    <div class="notes-meal-summary-title">Selected Meals Summary (from checkboxes above)</div>
+    <div class="notes-meal-summary-text" id="meal-summary-ultimateheritage">Click "Save Notes" to generate meal summary.</div>
+  </div>
+
+  <div class="notes-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;">
+    <div class="notes-field">
+      <label>Group Name / Reference</label>
+      <input type="text" id="n-group-ultimateheritage" placeholder="e.g. Smith Family Group 2026">
+    </div>
+    <div class="notes-field">
+      <label>Departure Date</label>
+      <input type="date" id="n-date-ultimateheritage">
+    </div>
+    <div class="notes-field">
+      <label>No. of Passengers</label>
+      <input type="number" id="n-pax-ultimateheritage" placeholder="16" min="1" max="60">
+    </div>
+    <div class="notes-field">
+      <label>Lead Contact Name</label>
+      <input type="text" id="n-contact-ultimateheritage" placeholder="Contact name">
+    </div>
+    <div class="notes-field">
+      <label>Contact Email</label>
+      <input type="email" id="n-email-ultimateheritage" placeholder="email@example.com">
+    </div>
+    <div class="notes-field">
+      <label>Special Requirements</label>
+      <select id="n-diet-ultimateheritage">
+        <option value="">None</option>
+        <option>Vegetarian</option>
+        <option>Vegan</option>
+        <option>Halal</option>
+        <option>Gluten Free</option>
+        <option>Mixed dietary needs</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:10px;">
+    <label>General Tour Notes &amp; Special Requests</label>
+    <textarea id="n-notes-ultimateheritage" placeholder="Add any specific requests, accessibility needs, room preferences, visa requirements, notes for tour manager..."></textarea>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:12px;">
+    <label>Internal / Operator Notes (not shown to guests)</label>
+    <textarea id="n-internal-ultimateheritage" placeholder="Pricing notes, supplier contacts, margin info, booking references..."></textarea>
+  </div>
+
+  <div class="notes-save-row">
+    <button class="notes-save-btn" onclick="saveNotes('ultimateheritage','ultimate-heritage',10)">💾 Save &amp; Generate Summary</button>
+    <button class="notes-save-btn" onclick="clearNotes('ultimateheritage')" style="background:#6b7280;">✕ Clear</button>
+    <button class="notes-save-btn" onclick="window.print()" style="background:#c9a84c;color:#1a3a5c;">🖨 Print / Save PDF</button>
+    <span class="notes-status" id="status-ultimateheritage"></span>
+  </div>
+</div>
+</div>
 </section>
 <section class="tour-sec" id="tour-family-adventure">
   <div class="tour-hero"><img src="photo-family.jpg" alt="UK Family Adventure: Castles, Wizards & Wildlife"></div>
@@ -621,7 +902,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
         <p class="hb-diet-note">100% international International</p>
       </div>
     
-      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="UK%20Family%20Adventure.png" alt="family-adventure route" loading="lazy"/></div></div>
+      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="uk-family-adventure.png" alt="family-adventure route" loading="lazy"/></div></div>
     <div class="hb-section hb-full"><h4 class="hb-sec-hd">⭐ Don't Miss</h4><ul class="hb-dm-list"><li>The kids\</li><li>The green screen broomstick experience — kids actually fly on a broomstick and the video shows them flying over London like Harry Potter</li><li>The T-Rex at Natural History Museum — it moves and roars, and kids absolutely love it</li></ul></div>
   </div>
 </div></div>
@@ -647,27 +928,89 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
 
   <div class="padded">
     <h3 class="sec-hd" style="color:#6b21a8">Day-by-Day Itinerary</h3>
-    <div class="itin"><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 1</span><span class="day-ttl">Arrival in London — The Adventure Begins!</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb40" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml40" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md40" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Arrive at London Heathrow. Welcome by your tour manager. Kids receive welcome activity packs. Transfer to Heston Hyde Hotel, Hounslow (20 minutes). Check-in with early room access if available. Evening: Welcome family dinner at The Ivy (London) — kids' menu available, high chairs provided, ice cream for children. Tour briefing for parents.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 2</span><span class="day-ttl">Harry Potter Warner Bros. Studio Tour — The Making of Magic</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb41" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml41" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md41" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Early breakfast at hotel (7:00 AM for early entry). Depart for Warner Bros. Studio Tour London — The Making of Harry Potter (1 hour drive). FULL DAY MAGICAL EXPERIENCE: Walk through the Great Hall at Hogwarts, see original costumes and props, board the Hogwarts Express on Platform 9¾, walk down Diagon Alley (Ollivanders, Flourish & Blotts), see the Forbidden Forest with animatronic creatures, try butterbeer (non-alcoholic, kids love it!), green screen experience: fly on broomstick over London. Lunch at studio café (packed packed lunch available for children if preferred). Continue studio exploration. Souvenir shop for wands and robes. Evening: Return to London. Dinner at a local restaurant (Covent Garden) — children's menu with popular family dishes.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 3</span><span class="day-ttl">London Eye, Sea Life Aquarium & Natural History Museum</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb42" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml42" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md42" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. London Eye — family capsule with 360° views, kids' activity sheet provided. Sea Life London Aquarium — walk through ocean tunnel, see sharks, touch pool experience (kids can touch starfish), penguin beach. Lunch at Madras Café (near South Bank) — quick service, kids' portions. Natural History Museum (free entry) — DINOSAURS! See the famous Diplodocus skeleton in Hintze Hall, T-Rex moving model in dinosaur gallery, earthquake simulator, hands-on science zones. Children's favourite museum. Late Afternoon: Diana Memorial Playground (Kensington Gardens) — pirate ship playground, free entry, let kids burn energy. Evening: Dinner at a celebrated local restaurant (King's Cross) — kids' menu, lively atmosphere, early evening for tired children.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 4</span><span class="day-ttl">Legoland Windsor & Transfer to Birmingham</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb43" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml43" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md43" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Depart for LEGOLAND Windsor (45 minutes). FULL DAY THEME PARK: Over 55 interactive rides and attractions, Miniland (LEGO replicas of famous landmarks including London, Paris, Sydney), Driving School (kids aged 6-13 drive LEGO cars and get real driving licences), Pirate Falls, Viking River Splash (water rides — bring change of clothes!), Star Wars LEGO models, Duplo Valley for younger children (ages 2-5), live shows and character meet-and-greets. Lunch inside Legoland (various options, packed packed lunch available). Late Afternoon: Depart for Birmingham (2 hours). Check-in at Delta Hotels by Marriott Birmingham — swimming pool for evening relaxation. Evening: Dinner at hotel with quality options. Family movie night in hotel room or early sleep for tired kids.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 5</span><span class="day-ttl">Cadbury World & Thinktank Science Museum</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb44" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml44" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md44" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Depart for Cadbury World (30 minutes). FULL MORNING CHOCOLATE ADVENTURE: 4D Chocolate Adventure cinema experience (moving seats, wind, water), see how chocolate is made from bean to bar, write your name in melted chocolate, play in chocolate rain, free chocolate samples throughout tour, outdoor African adventure play area, world's biggest Cadbury shop. Lunch at Cadbury World café or packed packed lunch. Afternoon: Thinktank Birmingham Science Museum — interactive science garden, planetarium, steam engines, aircraft including Spitfire, future technology zone, hands-on exhibits perfect for children. Evening: Dinner at Pushkar (Birmingham) — family-friendly, kids' local cuisine options.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 6</span><span class="day-ttl">Cotswold Wildlife Park & Castle Check-in</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb45" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml45" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md45" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Depart for Cotswolds (1 hour). Cotswold Wildlife Park — AMAZING FOR KIDS: see lions, giraffes, rhinos, zebras, walk through lemur enclosure (lemurs climb on you), train ride around park, adventure playground, farmyard petting area, dinosaurs in the woods (model T-Rex!). Picnic lunch in park (packed packed lunch provided) or park café. Afternoon: Drive to Thornbury Castle (30 minutes). CASTLE ADVENTURE BEGINS! Kids receive "Junior Knight" certificates on arrival, explore castle ramparts and towers, treasure hunt in castle grounds (find hidden clues), dress-up box with medieval costumes for photos. Evening: Medieval Banquet Dinner at castle — kids eat early (5:30 PM), adults later. quality options for all.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 7</span><span class="day-ttl">Longleat Safari Park & Adventure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb46" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml46" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md46" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at castle. Checkout with sad goodbyes. Depart for Longleat Safari Park (45 minutes). FULL DAY SAFARI ADVENTURE — KIDS LOVE THIS: Drive-through safari (in our coach) with lions, tigers, wolves, elephants, giraffes, monkeys (they climb on vehicles!), safari boats to see hippos and sea lions, Jungle Kingdom walk-through enclosures with small animals, Adventure Castle (huge playground with slides and towers), Longleat House (stately home), world's longest hedge maze, Postman Pat Village for younger children. Lunch at safari park (various options, packed packed lunch available). Late Afternoon: Transfer to hotel near Longleat/Bath (30 minutes). Check-in. Evening: Dinner at Rajpoot (Bath) or hotel with menu options. Family games evening or early night.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 8</span><span class="day-ttl">Transfer to Manchester, Science Museum</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb47" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml47" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md47" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Scenic drive to Manchester (3 hours with stops). Lunch at The international Cottage (en route) — break journey. Afternoon: Check-in at Weetwood Hall Estate. Science and Industry Museum Manchester — GREAT FOR KIDS: interactive exhibits on Manchester's industrial past, working steam engines, Air and Space Hall with real aircraft including Spitfire, Experiment! hands-on science zone, free entry. Late Afternoon: Hotel pool time or explore Weetwood Hall grounds (9-hole family golf, woodland walks). Evening: Dinner at a celebrated Leeds restaurant (Leeds) — family-friendly, kids' portions.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 9</span><span class="day-ttl">Alton Towers Theme Park — Thrill Day!</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb48" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml48" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md48" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Early breakfast at hotel (6:30 AM for early entry). Depart for Alton Towers (1.5 hours). FULL DAY AT UK'S BIGGEST THEME PARK: CBeebies Land for ages 2-6 (In the Night Garden, Postman Pat, Octonauts, live shows), thrill rides for older kids (Nemesis, Oblivion, The Smiler, Wicker Man), Waterpark optional afternoon session (separate ticket), beautiful gardens for quieter moments, monorail transport around park. Lunch inside Alton Towers (various options, packed packed lunch available). Late Afternoon: Depart for Lake District (2 hours). Check-in at The Ro Hotel, Windermere. Evening: Dinner at The Cottage (Bowness) — lakeside location, kids' menu. Early night after big day.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 10</span><span class="day-ttl">Lake District — Boats, Beatrix Potter & Gruffalo Trail</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb49" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml49" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md49" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast at hotel. Windermere Lake Cruise — kids love boats! Cruise from Bowness to Ambleside. The World of Beatrix Potter Attraction — PERFECT FOR YOUNGER KIDS: walk through Peter Rabbit's world, see Jemima Puddle-Duck, Mrs. Tiggy-Winkle, interactive exhibits, garden play area. Lunch at a local Ambleside restaurant — kids' options available. Afternoon: Gruffalo Trail at Whinlatter Forest — OUTDOOR ADVENTURE: follow the Gruffalo story through the woods, activity pack for kids, play areas and sculptures, beautiful forest setting, free entry (parking charge only). Late Afternoon: Return to Windermere. Beach time at Bowness Bay — build sandcastles, paddle in lake (weather permitting). Evening: Dinner at Bombay Spice (Windermere) — takeaway option if kids tired.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 11</span><span class="day-ttl">Transfer to Edinburgh, Castle & Falconry</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb50" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml50" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md50" checked><span>🌙 Dinner</span></label></div>
-<p class="day-desc">Breakfast and checkout. Scenic drive to Edinburgh via Hadrian's Wall (3.5 hours with stops). Lunch stop in Carlisle. Afternoon: Arrive at Dalhousie Castle — FAIRYTALE FINALE! Check-in. Kids receive "Lord/Lady of the Castle" certificates. Edinburgh Castle — see Crown Jewels, Mons Meg cannon, prison cells. Walk Royal Mile — street performers, tartan shops, fudge tasting. Return to Dalhousie Castle. Falconry experience for kids: handle owls and hawks (gentle birds for children). Evening: Farewell Medieval Banquet — early kids' dinner (5:30 PM), adults later. quality options.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 12</span><span class="day-ttl">Edinburgh Zoo & Departure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb51" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml51" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md51" checked><span>🌙 Dinner</span></label></div>
+    <div class="itin"><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 1</span><span class="day-ttl">Arrival in London — The Adventure Begins!</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb40"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml40"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md40"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Arrive at London Heathrow. Welcome by your tour manager. Kids receive welcome activity packs. Transfer to Heston Hyde Hotel, Hounslow (20 minutes). Check-in with early room access if available. Evening: Welcome family dinner at The Ivy (London) — kids' menu available, high chairs provided, ice cream for children. Tour briefing for parents.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 2</span><span class="day-ttl">Harry Potter Warner Bros. Studio Tour — The Making of Magic</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb41"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml41"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md41"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Early breakfast at hotel (7:00 AM for early entry). Depart for Warner Bros. Studio Tour London — The Making of Harry Potter (1 hour drive). FULL DAY MAGICAL EXPERIENCE: Walk through the Great Hall at Hogwarts, see original costumes and props, board the Hogwarts Express on Platform 9¾, walk down Diagon Alley (Ollivanders, Flourish & Blotts), see the Forbidden Forest with animatronic creatures, try butterbeer (non-alcoholic, kids love it!), green screen experience: fly on broomstick over London. Lunch at studio café (packed packed lunch available for children if preferred). Continue studio exploration. Souvenir shop for wands and robes. Evening: Return to London. Dinner at a local restaurant (Covent Garden) — children's menu with popular family dishes.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 3</span><span class="day-ttl">London Eye, Sea Life Aquarium & Natural History Museum</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb42"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml42"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md42"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. London Eye — family capsule with 360° views, kids' activity sheet provided. Sea Life London Aquarium — walk through ocean tunnel, see sharks, touch pool experience (kids can touch starfish), penguin beach. Lunch at Madras Café (near South Bank) — quick service, kids' portions. Natural History Museum (free entry) — DINOSAURS! See the famous Diplodocus skeleton in Hintze Hall, T-Rex moving model in dinosaur gallery, earthquake simulator, hands-on science zones. Children's favourite museum. Late Afternoon: Diana Memorial Playground (Kensington Gardens) — pirate ship playground, free entry, let kids burn energy. Evening: Dinner at a celebrated local restaurant (King's Cross) — kids' menu, lively atmosphere, early evening for tired children.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 4</span><span class="day-ttl">Legoland Windsor & Transfer to Birmingham</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb43"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml43"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md43"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Depart for LEGOLAND Windsor (45 minutes). FULL DAY THEME PARK: Over 55 interactive rides and attractions, Miniland (LEGO replicas of famous landmarks including London, Paris, Sydney), Driving School (kids aged 6-13 drive LEGO cars and get real driving licences), Pirate Falls, Viking River Splash (water rides — bring change of clothes!), Star Wars LEGO models, Duplo Valley for younger children (ages 2-5), live shows and character meet-and-greets. Lunch inside Legoland (various options, packed packed lunch available). Late Afternoon: Depart for Birmingham (2 hours). Check-in at Delta Hotels by Marriott Birmingham — swimming pool for evening relaxation. Evening: Dinner at hotel with quality options. Family movie night in hotel room or early sleep for tired kids.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 5</span><span class="day-ttl">Cadbury World & Thinktank Science Museum</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb44"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml44"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md44"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Depart for Cadbury World (30 minutes). FULL MORNING CHOCOLATE ADVENTURE: 4D Chocolate Adventure cinema experience (moving seats, wind, water), see how chocolate is made from bean to bar, write your name in melted chocolate, play in chocolate rain, free chocolate samples throughout tour, outdoor African adventure play area, world's biggest Cadbury shop. Lunch at Cadbury World café or packed packed lunch. Afternoon: Thinktank Birmingham Science Museum — interactive science garden, planetarium, steam engines, aircraft including Spitfire, future technology zone, hands-on exhibits perfect for children. Evening: Dinner at Pushkar (Birmingham) — family-friendly, kids' local cuisine options.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 6</span><span class="day-ttl">Cotswold Wildlife Park & Castle Check-in</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb45"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml45"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md45"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Depart for Cotswolds (1 hour). Cotswold Wildlife Park — AMAZING FOR KIDS: see lions, giraffes, rhinos, zebras, walk through lemur enclosure (lemurs climb on you), train ride around park, adventure playground, farmyard petting area, dinosaurs in the woods (model T-Rex!). Picnic lunch in park (packed packed lunch provided) or park café. Afternoon: Drive to Thornbury Castle (30 minutes). CASTLE ADVENTURE BEGINS! Kids receive "Junior Knight" certificates on arrival, explore castle ramparts and towers, treasure hunt in castle grounds (find hidden clues), dress-up box with medieval costumes for photos. Evening: Medieval Banquet Dinner at castle — kids eat early (5:30 PM), adults later. quality options for all.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 7</span><span class="day-ttl">Longleat Safari Park & Adventure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb46"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml46"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md46"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at castle. Checkout with sad goodbyes. Depart for Longleat Safari Park (45 minutes). FULL DAY SAFARI ADVENTURE — KIDS LOVE THIS: Drive-through safari (in our coach) with lions, tigers, wolves, elephants, giraffes, monkeys (they climb on vehicles!), safari boats to see hippos and sea lions, Jungle Kingdom walk-through enclosures with small animals, Adventure Castle (huge playground with slides and towers), Longleat House (stately home), world's longest hedge maze, Postman Pat Village for younger children. Lunch at safari park (various options, packed packed lunch available). Late Afternoon: Transfer to hotel near Longleat/Bath (30 minutes). Check-in. Evening: Dinner at hotel or a local Bath restaurant. Family games evening or early night.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 8</span><span class="day-ttl">Transfer to Manchester, Science Museum</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb47"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml47"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md47"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Scenic drive to Manchester (3 hours with stops). Lunch at The international Cottage (en route) — break journey. Afternoon: Check-in at Weetwood Hall Estate. Science and Industry Museum Manchester — GREAT FOR KIDS: interactive exhibits on Manchester's industrial past, working steam engines, Air and Space Hall with real aircraft including Spitfire, Experiment! hands-on science zone, free entry. Late Afternoon: Hotel pool time or explore Weetwood Hall grounds (9-hole family golf, woodland walks). Evening: Dinner at a celebrated Leeds restaurant (Leeds) — family-friendly, kids' portions.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 9</span><span class="day-ttl">Alton Towers Theme Park — Thrill Day!</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb48"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml48"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md48"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Early breakfast at hotel (6:30 AM for early entry). Depart for Alton Towers (1.5 hours). FULL DAY AT UK'S BIGGEST THEME PARK: CBeebies Land for ages 2-6 (In the Night Garden, Postman Pat, Octonauts, live shows), thrill rides for older kids (Nemesis, Oblivion, The Smiler, Wicker Man), Waterpark optional afternoon session (separate ticket), beautiful gardens for quieter moments, monorail transport around park. Lunch inside Alton Towers (various options, packed packed lunch available). Late Afternoon: Depart for Lake District (2 hours). Check-in at The Ro Hotel, Windermere. Evening: Dinner at The Cottage (Bowness) — lakeside location, kids' menu. Early night after big day.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 10</span><span class="day-ttl">Lake District — Boats, Beatrix Potter & Gruffalo Trail</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb49"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml49"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md49"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast at hotel. Windermere Lake Cruise — kids love boats! Cruise from Bowness to Ambleside. The World of Beatrix Potter Attraction — PERFECT FOR YOUNGER KIDS: walk through Peter Rabbit's world, see Jemima Puddle-Duck, Mrs. Tiggy-Winkle, interactive exhibits, garden play area. Lunch at a local Ambleside restaurant — kids' options available. Afternoon: Gruffalo Trail at Whinlatter Forest — OUTDOOR ADVENTURE: follow the Gruffalo story through the woods, activity pack for kids, play areas and sculptures, beautiful forest setting, free entry (parking charge only). Late Afternoon: Return to Windermere. Beach time at Bowness Bay — build sandcastles, paddle in lake (weather permitting). Evening: Dinner at Bombay Spice (Windermere) — takeaway option if kids tired.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 11</span><span class="day-ttl">Transfer to Edinburgh, Castle & Falconry</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb50"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml50"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md50"><span>🌙 Dinner</span></label></div>
+<p class="day-desc">Breakfast and checkout. Scenic drive to Edinburgh via Hadrian's Wall (3.5 hours with stops). Lunch stop in Carlisle. Afternoon: Arrive at Dalhousie Castle — FAIRYTALE FINALE! Check-in. Kids receive "Lord/Lady of the Castle" certificates. Edinburgh Castle — see Crown Jewels, Mons Meg cannon, prison cells. Walk Royal Mile — street performers, tartan shops, fudge tasting. Return to Dalhousie Castle. Falconry experience for kids: handle owls and hawks (gentle birds for children). Evening: Farewell Medieval Banquet — early kids' dinner (5:30 PM), adults later. quality options.</p></div><div class="day-block"><div class="day-hdr" style="background:#6b21a8"><span class="day-num">Day 12</span><span class="day-ttl">Edinburgh Zoo & Departure</span></div><div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb51"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml51"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md51"><span>🌙 Dinner</span></label></div>
 <p class="day-desc">Breakfast at castle. Edinburgh Zoo — FINAL ANIMAL ADVENTURE: Giant Pandas (if still at zoo — check current status), Penguin Parade (daily walk of penguins at 11:00 AM — must-see!), koalas, lions, tigers, giraffes, hilltop location with great views, play areas. Lunch at zoo café or packed packed lunch. Afternoon: Transfer to Edinburgh Airport (30 minutes). Departure flights. End of 12-day family adventure with memories of magic, wildlife, castles, and fun. Farewell gifts for kids: Scottish teddy bears, photo USB.</p></div></div>
   </div>
 
   <div class="tour-foot padded" style="border-top:2px solid #6b21a830">
     <p>Itinerary subject to change. All tours operate on 16-seater private coaches with experienced UK tour managers. Bookings &amp; pricing: <strong>international@tripfactory.com</strong> &nbsp;·&nbsp; ORN Group / TripFactory UK</p>
   </div>
+
+<div class="padded">
+<div class="tour-notes" id="notes-family-adventure">
+  <div class="tour-notes-title">📋 Tour Notes &amp; Customisation — UK Family Adventure</div>
+  
+  <div class="notes-meal-summary">
+    <div class="notes-meal-summary-title">Selected Meals Summary (from checkboxes above)</div>
+    <div class="notes-meal-summary-text" id="meal-summary-familyadventure">Click "Save Notes" to generate meal summary.</div>
+  </div>
+
+  <div class="notes-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;">
+    <div class="notes-field">
+      <label>Group Name / Reference</label>
+      <input type="text" id="n-group-familyadventure" placeholder="e.g. Smith Family Group 2026">
+    </div>
+    <div class="notes-field">
+      <label>Departure Date</label>
+      <input type="date" id="n-date-familyadventure">
+    </div>
+    <div class="notes-field">
+      <label>No. of Passengers</label>
+      <input type="number" id="n-pax-familyadventure" placeholder="16" min="1" max="60">
+    </div>
+    <div class="notes-field">
+      <label>Lead Contact Name</label>
+      <input type="text" id="n-contact-familyadventure" placeholder="Contact name">
+    </div>
+    <div class="notes-field">
+      <label>Contact Email</label>
+      <input type="email" id="n-email-familyadventure" placeholder="email@example.com">
+    </div>
+    <div class="notes-field">
+      <label>Special Requirements</label>
+      <select id="n-diet-familyadventure">
+        <option value="">None</option>
+        <option>Vegetarian</option>
+        <option>Vegan</option>
+        <option>Halal</option>
+        <option>Gluten Free</option>
+        <option>Mixed dietary needs</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:10px;">
+    <label>General Tour Notes &amp; Special Requests</label>
+    <textarea id="n-notes-familyadventure" placeholder="Add any specific requests, accessibility needs, room preferences, visa requirements, notes for tour manager..."></textarea>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:12px;">
+    <label>Internal / Operator Notes (not shown to guests)</label>
+    <textarea id="n-internal-familyadventure" placeholder="Pricing notes, supplier contacts, margin info, booking references..."></textarea>
+  </div>
+
+  <div class="notes-save-row">
+    <button class="notes-save-btn" onclick="saveNotes('familyadventure','family-adventure',12)">💾 Save &amp; Generate Summary</button>
+    <button class="notes-save-btn" onclick="clearNotes('familyadventure')" style="background:#6b7280;">✕ Clear</button>
+    <button class="notes-save-btn" onclick="window.print()" style="background:#c9a84c;color:#1a3a5c;">🖨 Print / Save PDF</button>
+    <span class="notes-status" id="status-familyadventure"></span>
+  </div>
+</div>
+</div>
 </section>
 <section class="tour-sec" <section class="tour-page" id="tour-towers-temples">
-  <div class="tour-hero"><img src="photo-castles.jpg" alt="Castles and Glens" loading="eager"></div>
+  <div class="tour-hero"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDEyMDAgNTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxYTNhNWMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMmQ2YTlmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9InVybCgjZykiLz4KICA8dGV4dCB4PSI2MDAiIHk9IjIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCI+8J+PsDwvdGV4dD4KICA8dGV4dCB4PSI2MDAiIHk9IjMzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI0MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIAogICAgICAgIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCIgb3BhY2l0eT0iMC45Ij5DYXN0bGVzICYgR2xlbnM8L3RleHQ+CiAgPHRleHQgeD0iNjAwIiB5PSIzODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiAKICAgICAgICBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC42Ij5SZXBsYWNlIHdpdGggZGVzdGluYXRpb24gcGhvdG88L3RleHQ+Cjwvc3ZnPg==" alt="Scottish Highlands and Glens" loading="eager"></div>
 
   <div class="tour-hdr" style="border-left:6px solid #1a3a5c">
     <div class="meta-top">
@@ -735,7 +1078,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
           <li>🏛 York Minster &amp; medieval city walls</li>
         </ul>
       </div>
-      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="Towers%20and%20Temples.png" alt="towers-temples route" loading="lazy"/></div>
+      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="castles-and-glens.png" alt="towers-temples route" loading="lazy"/></div>
     </div>
   </div>
   </div>
@@ -758,58 +1101,120 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
     <div class="itin-head" style="background:#1a3a5c">Day-by-Day Itinerary</div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 1</div><span class="day-ttl">Arrival in London</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt1b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt1l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt1d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt1b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt1l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt1d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Arrive at London Heathrow. Welcome by your tour manager. Transfer to Heston Hyde Hotel, Hounslow. Evening orientation dinner and briefing.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 2</div><span class="day-ttl">London Highlights</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt2b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt2l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt2d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt2b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt2l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt2d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Full London city tour: Buckingham Palace, Westminster Abbey, Big Ben, Houses of Parliament, Tower Bridge, St Paul's Cathedral. Lunch at a Covent Garden brasserie. Afternoon: Tower of London — Crown Jewels, Beefeater tour. Evening: London Eye for panoramic night views. Dinner at a celebrated King's Cross restaurant.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 3</div><span class="day-ttl">Warwick Castle &amp; Transfer to Thornbury</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt3b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt3l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt3d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt3b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt3l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt3d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Drive to <strong>Warwick Castle</strong> — one of England's finest medieval fortresses. Full day: ramparts, Great Hall, dungeon, trebuchet experience, daily falconry show and jousting display. Lunch at the castle. Afternoon: transfer to <strong>Thornbury Castle</strong> — England's only Tudor castle hotel. Dinner in the castle's historic dining room. Overnight Thornbury Castle.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 4</div><span class="day-ttl">Stonehenge, Bath &amp; Castle Day</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt4b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt4l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt4d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt4b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt4l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt4d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Morning at Thornbury Castle — explore the Tudor gardens and vineyard. Drive to <strong>Stonehenge</strong> — the world's most famous prehistoric monument, 5,000 years old, UNESCO World Heritage Site. Continue to <strong>Bath</strong>: Roman Baths (2,000-year-old thermal complex), Royal Crescent, Pulteney Bridge. Lunch at a Bath restaurant. Return to Thornbury Castle. Dinner at castle. Overnight Thornbury.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 5</div><span class="day-ttl">Cotswolds &amp; Stratford-upon-Avon</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt5b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt5l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt5d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt5b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt5l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt5d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Checkout and drive through the <strong>Cotswolds</strong> — Bibury (Arlington Row cottages), Bourton-on-the-Water, Stow-on-the-Wold. Continue to <strong>Stratford-upon-Avon</strong>: Shakespeare's Birthplace, Anne Hathaway's Cottage, Holy Trinity Church. Lunch at a Stratford restaurant. Afternoon: drive to Birmingham. Dinner at a Birmingham city centre restaurant. Overnight Delta Marriott, Birmingham.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 6</div><span class="day-ttl">Peak District &amp; York</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt6b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt6l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt6d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt6b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt6l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt6d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Drive through the <strong>Peak District</strong> — England's first national park: dramatic moorlands, gritstone edges, Chatsworth House (the "Palace of the Peak"). Continue north to <strong>York</strong>: York Minster (largest Gothic cathedral in Northern Europe), Shambles street (medieval timber-framed shops), medieval city walls (2-mile walkable circuit). Lunch at a York restaurant. Overnight Judges Court York.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 7</div><span class="day-ttl">Yorkshire Dales &amp; Lake District Arrival</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt7b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt7l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt7d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt7b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt7l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt7d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Drive through the <strong>Yorkshire Dales</strong>: Bolton Abbey ruins by the River Wharfe, Aysgarth Falls triple cascade, Hawes village with Wensleydale cheese tasting. Arrive in the <strong>Lake District</strong> — UNESCO World Heritage Site. Check in at The Ro Hotel, Windermere. Afternoon: Windermere cruise. Dinner at a lakeside restaurant. Overnight The Ro Hotel.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 8</div><span class="day-ttl">Full Day Lake District</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt8b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt8l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt8d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt8b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt8l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt8d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Full day exploring the Lakes. Morning: Grasmere — Dove Cottage (Wordsworth's home), Grasmere Gingerbread. Ambleside and Waterhead pier. Afternoon: Beatrix Potter's Hill Top Farm at Near Sawrey. Ullswater Steamers cruise — England's most beautiful lake. Lunch at a local restaurant. Evening: dinner at hotel. Overnight The Ro Hotel, Windermere.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 9</div><span class="day-ttl">Hadrian's Wall &amp; Transfer to Scotland</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt9b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt9l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt9d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt9b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt9l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt9d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Drive north through Cumbria. Stop at <strong>Hadrian's Wall</strong> UNESCO World Heritage Site — 73-mile Roman frontier built AD 122. Visit Housesteads Roman Fort (best-preserved in Britain) and Sycamore Gap (famous tree featured in Robin Hood). Lunch at a Carlisle restaurant. Cross into Scotland. Arrive at Rosslea Hall Hotel on the banks of the Clyde. Dinner at hotel. Overnight Rosslea Hall.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 10</div><span class="day-ttl">Loch Lomond &amp; Loch Ness</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt10b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt10l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt10d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt10b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt10l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt10d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Morning: <strong>Loch Lomond</strong> cruise — largest freshwater lake in Britain, beautiful "bonnie banks". Luss village. Drive through the Highlands to <strong>Loch Ness</strong> — cruise on Scotland's most famous loch. Visit Urquhart Castle ruins perched on the loch shore. Lunch at a lochside restaurant. Return to hotel. Overnight Rosslea Hall.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 11</div><span class="day-ttl">Edinburgh — Castle &amp; Royal Mile</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt11b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt11l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt11d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt11b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt11l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt11d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Drive to Edinburgh. Check in at <strong>Dalhousie Castle Hotel</strong> — your 13th-century fortress. Visit <strong>Edinburgh Castle</strong>: Crown Jewels of Scotland, Stone of Destiny, Great Hall. Walk the <strong>Royal Mile</strong> — historic closes, St Giles' Cathedral, Palace of Holyroodhouse. Lunch at a celebrated Edinburgh restaurant. Evening: farewell castle dinner. Overnight Dalhousie Castle.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#1a3a5c"><div class="day-num" style="background:#1a3a5c">Day 12</div><span class="day-ttl">Departure from Edinburgh</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt12b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt12l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt12d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="tt12b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="tt12l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="tt12d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Breakfast at castle. Late checkout (11 AM). Optional morning: Arthur's Seat hike (45 min, panoramic city views) or Scottish National Gallery. Transfer to Edinburgh Airport for departure flights. Your tour manager assists with check-in. Safe onward journey!</p></div>
 
   </div>
   </div>
+
+<div class="padded">
+<div class="tour-notes" id="notes-towers-temples">
+  <div class="tour-notes-title">📋 Tour Notes &amp; Customisation — Castles & Glens</div>
+  
+  <div class="notes-meal-summary">
+    <div class="notes-meal-summary-title">Selected Meals Summary (from checkboxes above)</div>
+    <div class="notes-meal-summary-text" id="meal-summary-towerstemples">Click "Save Notes" to generate meal summary.</div>
+  </div>
+
+  <div class="notes-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;">
+    <div class="notes-field">
+      <label>Group Name / Reference</label>
+      <input type="text" id="n-group-towerstemples" placeholder="e.g. Smith Family Group 2026">
+    </div>
+    <div class="notes-field">
+      <label>Departure Date</label>
+      <input type="date" id="n-date-towerstemples">
+    </div>
+    <div class="notes-field">
+      <label>No. of Passengers</label>
+      <input type="number" id="n-pax-towerstemples" placeholder="16" min="1" max="60">
+    </div>
+    <div class="notes-field">
+      <label>Lead Contact Name</label>
+      <input type="text" id="n-contact-towerstemples" placeholder="Contact name">
+    </div>
+    <div class="notes-field">
+      <label>Contact Email</label>
+      <input type="email" id="n-email-towerstemples" placeholder="email@example.com">
+    </div>
+    <div class="notes-field">
+      <label>Special Requirements</label>
+      <select id="n-diet-towerstemples">
+        <option value="">None</option>
+        <option>Vegetarian</option>
+        <option>Vegan</option>
+        <option>Halal</option>
+        <option>Gluten Free</option>
+        <option>Mixed dietary needs</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:10px;">
+    <label>General Tour Notes &amp; Special Requests</label>
+    <textarea id="n-notes-towerstemples" placeholder="Add any specific requests, accessibility needs, room preferences, visa requirements, notes for tour manager..."></textarea>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:12px;">
+    <label>Internal / Operator Notes (not shown to guests)</label>
+    <textarea id="n-internal-towerstemples" placeholder="Pricing notes, supplier contacts, margin info, booking references..."></textarea>
+  </div>
+
+  <div class="notes-save-row">
+    <button class="notes-save-btn" onclick="saveNotes('towerstemples','towers-temples',12)">💾 Save &amp; Generate Summary</button>
+    <button class="notes-save-btn" onclick="clearNotes('towerstemples')" style="background:#6b7280;">✕ Clear</button>
+    <button class="notes-save-btn" onclick="window.print()" style="background:#c9a84c;color:#1a3a5c;">🖨 Print / Save PDF</button>
+    <span class="notes-status" id="status-towerstemples"></span>
+  </div>
+</div>
+</div>
 </section>
 <section class="tour-sec" <section class="tour-page" id="tour-bollywood-uk">
-  <div class="tour-hero"><img src="photo-film.jpg" alt="British Film and Entertainment" loading="eager"></div>
+  <div class="tour-hero"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDEyMDAgNTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwZTZlNTUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMWE5ZTdhIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9InVybCgjZykiLz4KICA8dGV4dCB4PSI2MDAiIHk9IjIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCI+8J+OrDwvdGV4dD4KICA8dGV4dCB4PSI2MDAiIHk9IjMzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI0MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIAogICAgICAgIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCIgb3BhY2l0eT0iMC45Ij5GaWxtICYgRW50ZXJ0YWlubWVudDwvdGV4dD4KICA8dGV4dCB4PSI2MDAiIHk9IjM4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIyMiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIAogICAgICAgIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjYiPlJlcGxhY2Ugd2l0aCBkZXN0aW5hdGlvbiBwaG90bzwvdGV4dD4KPC9zdmc+" alt="British Film and Entertainment" loading="eager"></div>
 
   <div class="tour-hdr" style="border-left:6px solid #0e6e55">
     <div class="meta-top">
@@ -877,7 +1282,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
           <li>📺 MediaCityUK — BBC &amp; ITV studios, Salford</li>
         </ul>
       </div>
-      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="Entertainment%20UK%20Experience.png" alt="bollywood-uk route" loading="lazy"/></div>
+      <div class="hb-map-col"><h4 class="hb-sec-hd">🗺 Route Map</h4><img src="Film%20and%20Entertainment.png" alt="Film and Entertainment Tour Route" loading="lazy"/></div>
     </div>
   </div>
   </div>
@@ -898,43 +1303,105 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
     <div class="itin-head" style="background:#0e6e55">Day-by-Day Itinerary</div>
 
     <div class="day-block"><div class="day-hdr" style="background:#0e6e55"><div class="day-num" style="background:#0e6e55">Day 1</div><span class="day-ttl">Arrival — Lights, Camera, London!</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk1b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk1l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk1d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk1b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk1l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk1d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Arrive at London Heathrow. Welcome by your film &amp; entertainment guide. Transfer to Heston Hyde Hotel. Evening: orientation walk of central London — South Bank, Tate Modern, Millennium Bridge (Harry Potter filming location). Dinner at a riverside restaurant. Welcome briefing with your film location map and tour guide booklet.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#0e6e55"><div class="day-num" style="background:#0e6e55">Day 2</div><span class="day-ttl">Pinewood Studios &amp; West End</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk2b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk2l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk2d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk2b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk2l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk2d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Morning: group tour of <strong>Pinewood Studios</strong> — home of James Bond (007 Stage), Star Wars, and countless British film classics. See working sound stages, prop stores, and the iconic back lot. Lunch at the studio lot. Afternoon: return to London. Evening: <strong>West End theatre show</strong> — see one of London's world-famous productions (show selected based on availability). Post-show dinner near the theatre.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#0e6e55"><div class="day-num" style="background:#0e6e55">Day 3</div><span class="day-ttl">London Film &amp; TV Locations Walk</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk3b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk3l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk3d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk3b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk3l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk3d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Guided film locations walking tour with expert guide: <strong>Westminster Bridge</strong> (24, Sherlock Holmes), <strong>Trafalgar Square</strong> (countless film appearances), <strong>Borough Market</strong> (Harry Potter, Lock Stock), <strong>St Paul's Cathedral steps</strong>, <strong>Leadenhall Market</strong> (Diagon Alley in Harry Potter). Lunch at Borough Market. Afternoon: Baker Street and Sherlock Holmes Museum. Tower Bridge at golden hour. Dinner at a local restaurant.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#0e6e55"><div class="day-num" style="background:#0e6e55">Day 4</div><span class="day-ttl">Oxford — Harry Potter &amp; Inspector Morse Country</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk4b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk4l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk4d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk4b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk4l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk4d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Drive to <strong>Oxford</strong>. Guided Harry Potter filming locations tour: <strong>Christ Church</strong> (Great Hall inspiration for Hogwarts, used as Hogwarts exterior), <strong>Bodleian Library</strong> (Hogwarts library and infirmary), <strong>Divinity School</strong> (Hogwarts hospital wing), <strong>New College cloisters</strong>. Also: Inspector Morse and Endeavour filming spots throughout the city. Lunch at the historic Covered Market. Check in at Old Bank Hotel. Evening dinner and explore the city.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#0e6e55"><div class="day-num" style="background:#0e6e55">Day 5</div><span class="day-ttl">Cotswolds Film Locations &amp; Thornbury Castle</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk5b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk5l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk5d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk5b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk5l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk5d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Drive through the <strong>Cotswolds</strong> with film location guide: <strong>Bibury</strong> (Arlington Row cottages — Bridget Jones's Diary, Stardust), <strong>Bourton-on-the-Water</strong> (Downton Abbey, various period dramas), <strong>Burford</strong>, <strong>Chipping Campden</strong>. Lunch at a Cotswolds village pub. Afternoon: arrive at <strong>Thornbury Castle</strong> — England's only Tudor castle hotel, itself used in TV and film productions. Gala castle dinner. Overnight Thornbury Castle.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#0e6e55"><div class="day-num" style="background:#0e6e55">Day 6</div><span class="day-ttl">Manchester — MediaCity &amp; Film Quarter</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk6b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk6l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk6d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk6b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk6l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk6d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Drive to Manchester. Visit <strong>MediaCityUK in Salford</strong> — home of BBC North, ITV Studios, dock10 production studios, and the set of Coronation Street. Guided tour of the broadcast complex. Afternoon: <strong>Northern Quarter</strong> — Manchester's creative and media hub, street art, independent scene. Evening: Manchester's acclaimed restaurant scene. Check in at King Street Townhouse. Overnight Manchester.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#0e6e55"><div class="day-num" style="background:#0e6e55">Day 7</div><span class="day-ttl">Manchester City Tour &amp; Leisure</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk7b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk7l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk7d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk7b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk7l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk7d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Morning: <strong>Old Trafford Stadium Tour</strong> — Manchester United's Theatre of Dreams, museum and pitch-side access. Afternoon at leisure — shopping at the Arndale, Spinningfields, or the award-winning Whitworth Art Gallery. Optional: Etihad Stadium tour. Evening: dinner at a celebrated Manchester restaurant. Overnight King Street Townhouse.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#0e6e55"><div class="day-num" style="background:#0e6e55">Day 8</div><span class="day-ttl">Liverpool — Beatles, Docks &amp; Film History</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk8b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk8l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk8d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk8b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk8l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk8d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Transfer to <strong>Liverpool</strong> (1 hour). <strong>Beatles Story Museum</strong> at Albert Dock — the definitive Beatles experience: re-created Cavern Club, Hamburg years, Abbey Road and global fame. Walk to <strong>Penny Lane</strong> and <strong>Strawberry Field</strong>. <strong>Albert Dock</strong> — UNESCO World Heritage waterfront, one of the most filmed locations in British TV and film. Lunch at the dockside. Afternoon: Liverpool waterfront, Three Graces. Dinner at Hope Street Hotel. Overnight Liverpool.</p></div>
 
     <div class="day-block"><div class="day-hdr" style="background:#0e6e55"><div class="day-num" style="background:#0e6e55">Day 9</div><span class="day-ttl">Departure — The Closing Credits</span></div>
-    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk9b" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk9l" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk9d" checked><span>🌙 Dinner</span></label></div>
+    <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="bk9b"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="bk9l"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="bk9d"><span>🌙 Dinner</span></label></div>
     <p class="day-desc">Breakfast at hotel. Morning at leisure in Liverpool — browse the independent shops, visit the Walker Art Gallery or the World Museum. Transfer to <strong>Manchester Airport</strong> (45 minutes) or <strong>Liverpool John Lennon Airport</strong> for departure flights. Your tour manager assists with check-in. Farewell and safe travels — that's a wrap!</p></div>
 
   </div>
   </div>
+
+<div class="padded">
+<div class="tour-notes" id="notes-bollywood-uk">
+  <div class="tour-notes-title">📋 Tour Notes &amp; Customisation — British Film & Entertainment</div>
+  
+  <div class="notes-meal-summary">
+    <div class="notes-meal-summary-title">Selected Meals Summary (from checkboxes above)</div>
+    <div class="notes-meal-summary-text" id="meal-summary-bollywooduk">Click "Save Notes" to generate meal summary.</div>
+  </div>
+
+  <div class="notes-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;">
+    <div class="notes-field">
+      <label>Group Name / Reference</label>
+      <input type="text" id="n-group-bollywooduk" placeholder="e.g. Smith Family Group 2026">
+    </div>
+    <div class="notes-field">
+      <label>Departure Date</label>
+      <input type="date" id="n-date-bollywooduk">
+    </div>
+    <div class="notes-field">
+      <label>No. of Passengers</label>
+      <input type="number" id="n-pax-bollywooduk" placeholder="16" min="1" max="60">
+    </div>
+    <div class="notes-field">
+      <label>Lead Contact Name</label>
+      <input type="text" id="n-contact-bollywooduk" placeholder="Contact name">
+    </div>
+    <div class="notes-field">
+      <label>Contact Email</label>
+      <input type="email" id="n-email-bollywooduk" placeholder="email@example.com">
+    </div>
+    <div class="notes-field">
+      <label>Special Requirements</label>
+      <select id="n-diet-bollywooduk">
+        <option value="">None</option>
+        <option>Vegetarian</option>
+        <option>Vegan</option>
+        <option>Halal</option>
+        <option>Gluten Free</option>
+        <option>Mixed dietary needs</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:10px;">
+    <label>General Tour Notes &amp; Special Requests</label>
+    <textarea id="n-notes-bollywooduk" placeholder="Add any specific requests, accessibility needs, room preferences, visa requirements, notes for tour manager..."></textarea>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:12px;">
+    <label>Internal / Operator Notes (not shown to guests)</label>
+    <textarea id="n-internal-bollywooduk" placeholder="Pricing notes, supplier contacts, margin info, booking references..."></textarea>
+  </div>
+
+  <div class="notes-save-row">
+    <button class="notes-save-btn" onclick="saveNotes('bollywooduk','bollywood-uk',9)">💾 Save &amp; Generate Summary</button>
+    <button class="notes-save-btn" onclick="clearNotes('bollywooduk')" style="background:#6b7280;">✕ Clear</button>
+    <button class="notes-save-btn" onclick="window.print()" style="background:#c9a84c;color:#1a3a5c;">🖨 Print / Save PDF</button>
+    <span class="notes-status" id="status-bollywooduk"></span>
+  </div>
+</div>
+</div>
 </section>
 <section class="tour-page" id="tour-scottish-whisky">
   <div class="tour-hero"><img src="photo-whisky.jpg" alt="Scottish Highlands and Whisky Country" loading="eager"></div>
@@ -1031,7 +1498,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
       <div class="day-num" style="background:#5c3d1e">Day 1</div>
       <div class="day-body">
         <div class="day-title">Arrival in Edinburgh — Gateway to Whisky Country</div>
-        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb73" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml73" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md73" checked><span>🌙 Dinner</span></label></div>
+        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb73"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml73"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md73"><span>🌙 Dinner</span></label></div>
                 <p>Arrive at Edinburgh Airport and transfer to the magnificent <strong>Dalhousie Castle Hotel</strong>, a 13th-century castle just outside the city. Evening welcome dinner with an introductory whisky tasting — your expert guide introduces the five whisky regions of Scotland. Overnight Dalhousie Castle.</p>
       </div>
     </div>
@@ -1040,7 +1507,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
       <div class="day-num" style="background:#5c3d1e">Day 2</div>
       <div class="day-body">
         <div class="day-title">Edinburgh — Castle, Royal Mile &amp; The Scotch Whisky Experience</div>
-        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb74" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml74" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md74" checked><span>🌙 Dinner</span></label></div>
+        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb74"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml74"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md74"><span>🌙 Dinner</span></label></div>
                 <p>Morning visit to <strong>Edinburgh Castle</strong> — explore the Crown Jewels, Great Hall and breathtaking city views. Walk the <strong>Royal Mile</strong> through the Old Town. Afternoon at the <strong>Scotch Whisky Experience</strong> on the Royal Mile — the definitive whisky attraction with a barrel ride through Scotch history and guided tutored tasting of all five regions. Evening whisky-paired dinner at the castle hotel. Overnight Dalhousie Castle.</p>
       </div>
     </div>
@@ -1049,7 +1516,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
       <div class="day-num" style="background:#5c3d1e">Day 3</div>
       <div class="day-body">
         <div class="day-title">Perthshire — Highland Perthshire &amp; Aberfeldy Distillery</div>
-        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb75" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml75" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md75" checked><span>🌙 Dinner</span></label></div>
+        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb75"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml75"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md75"><span>🌙 Dinner</span></label></div>
                 <p>Journey north into <strong>Perthshire</strong>, Scotland's Big Tree Country. Visit <strong>Aberfeldy Distillery</strong> — famous for its "Dewar's" blended Scotch heritage set beside the River Tay. Tour the distillery and enjoy a tutored tasting. Afternoon drive through stunning Highland scenery to Crieff. Visit <strong>Glenturret Distillery</strong> — Scotland's oldest working distillery, home of Famous Grouse. Dinner at Crieff Hydro. Overnight Crieff Hydro Hotel.</p>
       </div>
     </div>
@@ -1058,7 +1525,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
       <div class="day-num" style="background:#5c3d1e">Day 4</div>
       <div class="day-body">
         <div class="day-title">Speyside Arrival — The Macallan &amp; Glenfiddich</div>
-        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb76" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml76" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md76" checked><span>🌙 Dinner</span></label></div>
+        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb76"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml76"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md76"><span>🌙 Dinner</span></label></div>
                 <p>Drive into the <strong>Speyside region</strong> — home to more distilleries than anywhere else on earth, producing the world's most celebrated single malts. Morning visit to <strong>The Macallan Estate</strong> — the pinnacle of luxury whisky production, set on a breathtaking 485-acre estate. The spectacular new distillery is an architectural marvel. Afternoon at <strong>Glenfiddich</strong> — the world's most awarded single malt Scotch whisky. Private tour including the Solera Vat Room and a Vintage Cask tasting. Whisky-paired dinner at Craigellachie. Overnight Craigellachie Hotel.</p>
       </div>
     </div>
@@ -1067,7 +1534,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
       <div class="day-num" style="background:#5c3d1e">Day 5</div>
       <div class="day-body">
         <div class="day-title">Speyside — Glenlivet, Strathisla &amp; Whisky Masterclass</div>
-        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb77" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml77" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md77" checked><span>🌙 Dinner</span></label></div>
+        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb77"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml77"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md77"><span>🌙 Dinner</span></label></div>
                 <p>A full day in Speyside's distillery heartland. Morning at <strong>The Glenlivet</strong> — the distillery that defined Speyside style, set in a beautiful highland valley. Visit <strong>Strathisla</strong> — the oldest continuously operating distillery in Scotland (est. 1786), home of Chivas Regal. Afternoon <strong>private whisky blending masterclass</strong> with a master blender — create your own personal blend to take home. Evening at leisure in Craigellachie village. Overnight Craigellachie Hotel.</p>
       </div>
     </div>
@@ -1076,7 +1543,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
       <div class="day-num" style="background:#5c3d1e">Day 6</div>
       <div class="day-body">
         <div class="day-title">Inverness, Dalmore &amp; Highlands</div>
-        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb78" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml78" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md78" checked><span>🌙 Dinner</span></label></div>
+        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb78"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml78"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md78"><span>🌙 Dinner</span></label></div>
                 <p>Drive north through breathtaking <strong>Highland scenery</strong> to Inverness — the capital of the Highlands. En route, visit <strong>Dalmore Distillery</strong> on the shores of the Cromarty Firth — producers of some of the world's most celebrated and collectable single malts. Explore <strong>Inverness Castle</strong> and the city centre. Afternoon visit to <strong>Culloden Battlefield</strong> — the dramatic site of the last battle fought on British soil (1746). Overnight Kingsmills Hotel, Inverness.</p>
       </div>
     </div>
@@ -1085,7 +1552,7 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
       <div class="day-num" style="background:#5c3d1e">Day 7</div>
       <div class="day-body">
         <div class="day-title">Loch Ness, Urquhart Castle &amp; Highland Finale</div>
-        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb79" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml79" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md79" checked><span>🌙 Dinner</span></label></div>
+        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb79"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml79"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md79"><span>🌙 Dinner</span></label></div>
                 <p>The iconic Loch Ness experience — cruise on <strong>Loch Ness</strong> with commentary on the legendary monster. Visit the dramatic ruins of <strong>Urquhart Castle</strong> perched on the loch shore. Drive through the <strong>Cairngorms National Park</strong> — Britain's largest national park with stunning moorland and mountain scenery. Visit <strong>Royal Lochnagar Distillery</strong> — the Queen's distillery, nestled beneath Balmoral Castle on Royal Deeside. Pass through <strong>Balmoral Estate</strong>. Farewell whisky dinner at Loch Ness Lodge. Overnight Loch Ness Lodge.</p>
       </div>
     </div>
@@ -1094,13 +1561,75 @@ body{font-family:"Source Sans 3",Georgia,serif;background:#eae6dd;color:#1a1a1a;
       <div class="day-num" style="background:#5c3d1e">Day 8</div>
       <div class="day-body">
         <div class="day-title">Departure — With a Dram to Remember</div>
-        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb80" checked><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml80" checked><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md80" checked><span>🌙 Dinner</span></label></div>
+        <div class="meal-sel"><span class="meal-sel-lbl">Meals:</span><label class="meal-chk"><input type="checkbox" id="mb80"><span>🌅 Breakfast</span></label><label class="meal-chk"><input type="checkbox" id="ml80"><span>☀️ Lunch</span></label><label class="meal-chk"><input type="checkbox" id="md80"><span>🌙 Dinner</span></label></div>
                 <p>Morning at leisure. Your expert guide hosts a final <strong>farewell tasting</strong> — comparing your week's favourite drams and recommending bottles for home. Transfer to <strong>Aberdeen Airport</strong> (or Edinburgh, subject to routing) for your departure flight. Depart with a souvenir dram glass, personalised whisky journal and memories of Scotland's liquid gold.</p>
       </div>
     </div>
 
   </div>
   </div>
+
+<div class="padded">
+<div class="tour-notes" id="notes-scottish-whisky">
+  <div class="tour-notes-title">📋 Tour Notes &amp; Customisation — Scotch Whisky Trail</div>
+  
+  <div class="notes-meal-summary">
+    <div class="notes-meal-summary-title">Selected Meals Summary (from checkboxes above)</div>
+    <div class="notes-meal-summary-text" id="meal-summary-scottishwhisky">Click "Save Notes" to generate meal summary.</div>
+  </div>
+
+  <div class="notes-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;">
+    <div class="notes-field">
+      <label>Group Name / Reference</label>
+      <input type="text" id="n-group-scottishwhisky" placeholder="e.g. Smith Family Group 2026">
+    </div>
+    <div class="notes-field">
+      <label>Departure Date</label>
+      <input type="date" id="n-date-scottishwhisky">
+    </div>
+    <div class="notes-field">
+      <label>No. of Passengers</label>
+      <input type="number" id="n-pax-scottishwhisky" placeholder="16" min="1" max="60">
+    </div>
+    <div class="notes-field">
+      <label>Lead Contact Name</label>
+      <input type="text" id="n-contact-scottishwhisky" placeholder="Contact name">
+    </div>
+    <div class="notes-field">
+      <label>Contact Email</label>
+      <input type="email" id="n-email-scottishwhisky" placeholder="email@example.com">
+    </div>
+    <div class="notes-field">
+      <label>Special Requirements</label>
+      <select id="n-diet-scottishwhisky">
+        <option value="">None</option>
+        <option>Vegetarian</option>
+        <option>Vegan</option>
+        <option>Halal</option>
+        <option>Gluten Free</option>
+        <option>Mixed dietary needs</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:10px;">
+    <label>General Tour Notes &amp; Special Requests</label>
+    <textarea id="n-notes-scottishwhisky" placeholder="Add any specific requests, accessibility needs, room preferences, visa requirements, notes for tour manager..."></textarea>
+  </div>
+  
+  <div class="notes-field" style="margin-bottom:12px;">
+    <label>Internal / Operator Notes (not shown to guests)</label>
+    <textarea id="n-internal-scottishwhisky" placeholder="Pricing notes, supplier contacts, margin info, booking references..."></textarea>
+  </div>
+
+  <div class="notes-save-row">
+    <button class="notes-save-btn" onclick="saveNotes('scottishwhisky','scottish-whisky',8)">💾 Save &amp; Generate Summary</button>
+    <button class="notes-save-btn" onclick="clearNotes('scottishwhisky')" style="background:#6b7280;">✕ Clear</button>
+    <button class="notes-save-btn" onclick="window.print()" style="background:#c9a84c;color:#1a3a5c;">🖨 Print / Save PDF</button>
+    <span class="notes-status" id="status-scottishwhisky"></span>
+  </div>
+</div>
+</div>
 </section>
 
 
@@ -1114,5 +1643,106 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   });
 });
 </script>
+
+<script>
+// ── NOTES SAVE / LOAD ─────────────────────────────────────────
+function saveNotes(uid, tid, days) {
+  const fields = ['group','date','pax','contact','email','diet','notes','internal'];
+  const data = {};
+  fields.forEach(f => {
+    const el = document.getElementById('n-' + f + '-' + uid);
+    if (el) data[f] = el.value;
+  });
+  
+  // Collect meal checkbox states
+  const meals = [];
+  for (let d = 1; d <= days; d++) {
+    const b = document.getElementById('mb' + d + uid) || document.querySelector(`#tour-${tid} input[id$="b${d}"]`);
+    const l = document.getElementById('ml' + d + uid) || document.querySelector(`#tour-${tid} input[id$="l${d}"]`);
+    const dn = document.getElementById('md' + d + uid) || document.querySelector(`#tour-${tid} input[id$="d${d}"]`);
+    const row = [];
+    if (b && b.checked) row.push('B');
+    if (l && l.checked) row.push('L');
+    if (dn && dn.checked) row.push('D');
+    if (row.length) meals.push('Day ' + d + ': ' + row.join('+'));
+  }
+  
+  // Also grab all checkboxes within this tour section
+  const section = document.getElementById('tour-' + tid);
+  if (section) {
+    const allBoxes = section.querySelectorAll('.meal-chk input[type=checkbox]');
+    const mealRows2 = [];
+    const dayTitles = section.querySelectorAll('.day-ttl, .day-title');
+    let dayIdx = 0;
+    let prevDay = null;
+    allBoxes.forEach((cb, i) => {
+      const dayNum = Math.floor(i / 3) + 1;
+      if (dayNum !== prevDay) {
+        prevDay = dayNum;
+        const mealSet = [];
+        const b = allBoxes[i];
+        const l = allBoxes[i+1];
+        const d = allBoxes[i+2];
+        if (b && b.checked) mealSet.push('Breakfast');
+        if (l && l.checked) mealSet.push('Lunch');
+        if (d && d.checked) mealSet.push('Dinner');
+        if (mealSet.length > 0) mealRows2.push('Day ' + dayNum + ': ' + mealSet.join(', '));
+        else mealRows2.push('Day ' + dayNum + ': No meals selected');
+      }
+    });
+    data.mealSummary = mealRows2.join(' | ');
+  }
+  
+  data.mealSummary = data.mealSummary || meals.join(' | ') || 'No meals selected';
+  data.savedAt = new Date().toLocaleString();
+  
+  try {
+    localStorage.setItem('tour-notes-' + tid, JSON.stringify(data));
+  } catch(e) {}
+  
+  // Update meal summary display
+  const summEl = document.getElementById('meal-summary-' + uid);
+  if (summEl) summEl.textContent = data.mealSummary || 'No meals selected';
+  
+  // Status
+  const st = document.getElementById('status-' + uid);
+  if (st) {
+    st.textContent = '✅ Saved at ' + data.savedAt;
+    setTimeout(() => { if(st) st.textContent = ''; }, 4000);
+  }
+}
+
+function clearNotes(uid) {
+  const fields = ['group','date','pax','contact','email','diet','notes','internal'];
+  fields.forEach(f => {
+    const el = document.getElementById('n-' + f + '-' + uid);
+    if (el) el.value = '';
+  });
+  const summEl = document.getElementById('meal-summary-' + uid);
+  if (summEl) summEl.textContent = 'Click "Save Notes" to generate meal summary.';
+}
+
+// Load saved notes on page load
+function loadAllNotes() {
+  const tours = ['grand-british-isles', 'london-paris-castles', 'lake-district-yorkshire', 'ultimate-heritage', 'family-adventure', 'towers-temples', 'bollywood-uk', 'scottish-whisky'];
+  tours.forEach(tid => {
+    try {
+      const saved = localStorage.getItem('tour-notes-' + tid);
+      if (!saved) return;
+      const data = JSON.parse(saved);
+      const uid = tid.replace(/-/g,'');
+      const fields = ['group','date','pax','contact','email','diet','notes','internal'];
+      fields.forEach(f => {
+        const el = document.getElementById('n-' + f + '-' + uid);
+        if (el && data[f] !== undefined) el.value = data[f];
+      });
+      const summEl = document.getElementById('meal-summary-' + uid);
+      if (summEl && data.mealSummary) summEl.textContent = data.mealSummary;
+    } catch(e) {}
+  });
+}
+document.addEventListener('DOMContentLoaded', loadAllNotes);
+</script>
+
 </body>
 </html>
